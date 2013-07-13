@@ -1,0 +1,12 @@
+{
+  "name": "54"
+, "version": "0.0.1"
+, "author": ""
+, "dependencies": {
+    "geddy":"0.9.x"
+  }
+, "devDependencies": {}
+, "engines": {
+    "node": "0.10.x"
+  }
+}
