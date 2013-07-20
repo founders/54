@@ -3,7 +3,9 @@
 , "version": "0.0.1"
 , "author": ""
 , "dependencies": {
-    "geddy":"0.9.x"
+    "geddy": "0.9.x"
+  , "less": "1.4.x"
+  , "utilities": "0.0.x"
   }
 , "devDependencies": {}
 , "engines": {
