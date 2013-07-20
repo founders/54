@@ -6,7 +6,8 @@ Crafted with care, to serve as the face of a very special event.
 ## Notes
 
  * Check in npm dependencies; this is a website.
- * `LESS` files are compiled on app init.
+ * `LESS` files are compiled on app init. The command is `foreman start`.
+ * `ejs` templates are compiled on every page load; there is no need to restart the app.
  * Front-end framework is Bootstrap + Designmodo's Flat UI.
  * All images must be retina ready, and leave your PSD in `/psds` so others can use it
 
