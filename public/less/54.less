@@ -1,14 +1,6 @@
 //Colors
 @illini-orange: #ff8000;
 
-// Import webfont
-@font-face {
-  font-family: 'EB Garamond';
-  font-style: normal;
-  font-weight: 400;
-  src: local('EB Garamond'), local('EBGaramond'), url(https://themes.googleusercontent.com/static/fonts/ebgaramond/v4/kYZt1bJ8UsGAPRGnkXPeFbrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
-}
-
 // Override bootstrap paddings
 .container-fluid {
   padding: 0px;
@@ -20,13 +12,69 @@
   }
 }
 
-.row {
-  margin-left: 0;
-}
-
 // Override fonts
 body {
-  font-family: 'EB Garamond', serif;
+  font-family: 'Georgia', serif;
+}
+
+// Navbar
+#mainnav {
+  position: absolute;
+  top: 450px;
+  left:0;
+  width: 100%;
+
+  .container {
+    width: @gridRowWidth - (2 * @gridColumnWidth) - @gridGutterWidth;
+    margin: 0 auto;
+
+    ul {
+      width: 100%;
+      text-align: center;
+    }
+    ul li {
+      display: inline;
+      float: none;
+      line-height: 25px;
+
+      a {
+        display: inline-block;
+      }
+    }
+
+    a.brand {
+      font-size: 3em;
+      padding: 0 0 0 25px;
+      line-height: 1em;
+      color: @asbestos;
+    }
+    a.brand.hidden {
+      display: none;
+      visibility: hidden;
+    }
+    a:hover,
+    a:active,
+    a.current {
+      color: @illini-orange;
+    }
+
+    @media (min-width: 1200px) {
+      width: @gridRowWidth1200 - (2 * @gridColumnWidth) - @gridGutterWidth;
+    }
+    @media (min-width: 768px) and (max-width: 979px) {
+      width: @gridRowWidth768 - (2 * @gridColumnWidth) - @gridGutterWidth;
+    }
+    @media (max-width: @navbarCollapseWidth) {
+      width: auto;
+    }
+  }
+}
+
+#mainnav.fixed {
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 9999;
 }
 
 // All panels inherit from this
@@ -36,6 +84,7 @@ body {
   padding: 50px 0;
 }
 
+// The panel with the big 54 logo
 #splash {
   .panel;
 
@@ -48,7 +97,7 @@ body {
     .at2x('/images/Logo.png', 320px, 320px);
 
     // Center logo
-    margin: 30px auto 0 auto;
+    margin: 30px auto 60px auto;
 
     h1 {
       display: none;
@@ -57,6 +106,7 @@ body {
   }
 }
 
+// The dark panel
 #blurb {
   .panel;
 
@@ -124,8 +174,9 @@ body {
   }
 }
 
-.overview {
-  margin: 50px 0;
+.itemgrid {
+  margin: -50px 0 50px 0;
+  padding: 100px 0 0 0;
 
   img {
     width: 100px;
@@ -180,6 +231,6 @@ body {
       font-size: 1.1em;
     }
 
-    padding: 0 20px;
+    padding: 50px 20px 0 20px;
   }
 }
