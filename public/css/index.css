@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300");
-.clearfix{*zoom:1}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0}
-.clearfix:after{clear:both}
-.hide-text{font:NaN a;color:transparent;text-shadow:none;background-color:transparent;border:0}
-.input-block-level{display:block;width:100%;min-height:30px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}
 audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
 audio:not([controls]){display:none}
@@ -887,6 +883,10 @@ a.label:hover,a.label:focus,a.badge:hover,a.badge:focus{color:#fff;text-decorati
 .show{display:block}
 .invisible{visibility:hidden}
 .affix{position:fixed}
+.clearfix{*zoom:1}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0}
+.clearfix:after{clear:both}
+.hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}
+.input-block-level{display:block;width:100%;min-height:30px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 @-ms-viewport{width:device-width}.hidden{display:none;visibility:hidden}
 .visible-phone{display:none !important}
 .visible-tablet{display:none !important}
@@ -1646,7 +1646,7 @@ input.search-query{padding-right:6px;padding-left:6px;margin-bottom:0;border-rad
 #mainnav .container ul li{display:inline;float:none;line-height:25px}#mainnav .container ul li a{display:inline-block}
 #mainnav .container a.brand{font-size:3em;padding:0 0 0 25px;line-height:1em;color:#7f8c8d}
 #mainnav .container a.brand.hidden{display:none;visibility:hidden}
-#mainnav .container a:hover,#mainnav .container a:active,#mainnav .container a.current{color:#ff8000}
+#mainnav .container li.active a,#mainnav .container a:hover,#mainnav .container a:active,#mainnav .container a.current{color:#ff8000}
 @media (min-width:1200px){#mainnav .container{width:1030px}}@media (min-width:768px) and (max-width:979px){#mainnav .container{width:584px}}@media (max-width:979px){#mainnav .container{width:auto}}
 #mainnav.fixed{position:fixed;top:0;left:0;z-index:9999}
 .panel{width:100%;text-align:center;padding:50px 0}
