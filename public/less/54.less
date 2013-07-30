@@ -235,3 +235,43 @@ body {
     padding: 50px 20px 0 20px;
   }
 }
+
+#contribute {
+  background-color: @black;
+  padding: 50px 0;
+
+  h2 {
+    color: @white;
+    margin-bottom: 50px;
+  }
+
+  ul.nav.nav-pills {
+    display: inline-block;
+  }
+
+  .formHolder {
+    color: #FFF;
+
+    form {
+      .control-label {
+        color: #FFF;
+        font-size: 1.5em;
+        line-height: 1.6em;
+      }
+
+      .controls.radio-controls {
+        margin-top: 12px;
+
+        label {
+          color: #FFF;
+          text-align: left;
+        }
+
+        // Fixes a stupid bug where first element text is too low
+        :first-child {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+}

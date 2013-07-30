@@ -49,6 +49,7 @@ var _ = require('lodash')
             'html5shiv.js'
           , 'jquery.js'
           , 'bootstrap.js'
+          , 'flatui-radio.js'
           , 'retina.js'
        // , 'webfont.js'
           , '54.js'
