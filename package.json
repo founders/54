@@ -3,11 +3,12 @@
 , "version": "0.0.1"
 , "author": ""
 , "dependencies": {
-    "geddy": "0.9.x"
+    "geddy": "https://github.com/mde/geddy/archive/master.tar.gz"
   , "less": "1.4.x"
   , "uglify-js": "2.3.x"
   , "utilities": "0.0.x"
   , "lodash": "1.3.x"
+  , "mandrill-api": "1.0.29"
   }
 , "devDependencies": {}
 , "engines": {
