@@ -20,12 +20,13 @@ Crafted with care, to serve as the face of a very special event.
  5. Enter the directory `cd ~/some_dir/54`
  6. Install dependencies `npm install && npm install -g geddy`
  7.	Create the text file `~/some_dir/54/.env` with the contents:
- 
+
  	```
- 	NODE_ENV=development
-	WORKERS=1	
+  NODE_ENV=development
+  WORKERS=1
+  GEDDY_SECRET=Jssya6sJfyiX1DYjRXPIrGaSW61SnBQjmhQq9RRKbCq1fpnb5AV0YkGj4dh5poKfroxatKuZ1W0UizraDiTF3Yc4SVwjQ8FhVDQ0aMxheIonyFR9jPPatN8QHR1OgjKM
  	```
- 	
+
  8. Start the app with `foreman start`
  9. Visit `http://localhost:8080`
 
