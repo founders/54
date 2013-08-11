@@ -22,8 +22,8 @@ var parse_url = require('./parse_url');
 var MONGO_PARSED = parse_url(process.env.MONGOLAB_URI);
 
 var config = {
-  detailedErrors: true
-, debug: true
+  detailedErrors: false
+, debug: false
 , hostname: "0.0.0.0"
 , port: process.env.PORT || 4000
 , model: {
