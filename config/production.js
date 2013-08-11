@@ -16,53 +16,33 @@
  *
 */
 
+var parse_url = require('./parse_url');
+
+//Parse_url is needed to parse the environment variable from heroku
+var MONGO_PARSED = parse_url(process.env.MONGOLAB_URI);
+
 var config = {
   detailedErrors: false
+, debug: false
 , hostname: "0.0.0.0"
 , port: process.env.PORT || 4000
 , model: {
-    defaultAdapter: 'memory'
+    defaultAdapter: 'mongo'
+  }
+, db: {
+    mongo: {
+      username: MONGO_PARSED.user
+    , dbname: MONGO_PARSED.path.substring(1)
+    , password: MONGO_PARSED.pass
+    , host: MONGO_PARSED.host
+    , port: parseInt(MONGO_PARSED.port)
+    }
   }
 , sessions: {
-    store: 'memory'
-  , key: 'sid'
+    store: 'cookie'
+  , key: 'pid'
   , expiry: 14 * 24 * 60 * 60
   }
-
-/* // Using Postgres as the default, with only a Postgres DB
-, model: {
-    defaultAdapter: 'postgres'
-  }
-, db: {
-    postgres: {
-      user: process.env.USER
-    , database: process.env.USER
-    , password: null
-    , host: null
-    , port: 5432
-    }
-  }
-*/
-
-/* // Using Postgres as the default, with both Postgres and Riak
-, model: {
-    defaultAdapter: 'postgres'
-  }
-, db: {
-    postgres: {
-      user: process.env.USER
-    , database: process.env.USER
-    , password: null
-    , host: null
-    , port: 5432
-    }
-  , riak: {
-      protocol: 'http'
-    , host: 'localhost'
-    , port: 8098
-  }
-  }
-*/
 };
 
 module.exports = config;
