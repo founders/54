@@ -1668,3 +1668,4 @@ input.search-query{padding-right:6px;padding-left:6px;margin-bottom:0;border-rad
 #contribute .formHolder{color:#FFF}#contribute .formHolder form .control-label{color:#FFF;font-size:1.5em;line-height:1.6em}
 #contribute .formHolder form .controls.radio-controls{margin-top:12px}#contribute .formHolder form .controls.radio-controls label{color:#FFF;text-align:left}
 #contribute .formHolder form .controls.radio-controls :first-child{padding-top:0}
+#contribute .formHolder form .controls .label{margin-top:5px}

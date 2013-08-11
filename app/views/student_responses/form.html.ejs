@@ -1,0 +1,122 @@
+      <div class="span6 offset3">
+        <form action="/student_responses<%= formAction %>" method="<%= formMethod %>" class="form-horizontal">
+          <div class="alert">
+            <h3>Make A Difference</h3>
+            <p>
+              We are looking for driven individuals with an interest in entrepreneurship to help us make this event a success. If you don&#39;t find a role that fits you, pick <strong>other</strong>, and we&#39;ll find a way for you to contribute meaningfully.
+            </p>
+          </div>
+          <%- controlGroup(studentResponse, 'fullname') %>
+            <label class="control-label" for="fullname">Full Name</label>
+            <div class="controls">
+              <%- contentTag('input', studentResponse.fullname, {type:'text', class:'span5', name:'fullname', placeholder:"Johnny Appleseed"}) %>
+              <%- errorLabel(studentResponse, 'fullname'); %>
+            </div>
+          </div>
+          <%- controlGroup(studentResponse, 'netid') %>
+            <label class="control-label" for="netid">NetID</label>
+            <div class="controls">
+              <%- contentTag('input', studentResponse.netid, {type:'text', class:'span5', name:'netid', placeholder:"jdoe2"}) %>
+              <%- errorLabel(studentResponse, 'netid'); %>
+            </div>
+          </div>
+          <%- controlGroup(studentResponse, 'major') %>
+            <label class="control-label" for="major">Major</label>
+            <div class="controls">
+              <%- contentTag('input', studentResponse.major, {type:'text', class:'span5', name:'major', placeholder:"Basketweaving"}) %>
+              <%- errorLabel(studentResponse, 'major'); %>
+            </div>
+          </div>
+          <%- controlGroup(studentResponse, 'year') %>
+            <label class="control-label" for="year">Year</label>
+            <div class="controls radio-controls">
+              <label class="radio">
+                <input type="radio" name="year" value="0" data-toggle="radio" <%= (studentResponse.year === 0 ? 'checked' : '') %> />Freshman
+              </label>
+              <label class="radio">
+                <input type="radio" name="year" value="1" data-toggle="radio" <%= (studentResponse.year === 1 ? 'checked' : '') %> />Sophomore
+              </label>
+              <label class="radio">
+                <input type="radio" name="year" value="2" data-toggle="radio" <%= (studentResponse.year === 2 ? 'checked' : '') %> />Junior
+              </label>
+              <label class="radio">
+                <input type="radio" name="year" value="3" data-toggle="radio" <%= (studentResponse.year === 3 ? 'checked' : '') %> />Senior
+              </label>
+              <%- errorLabel(studentResponse, 'year'); %>
+            </div>
+          </div>
+          <div class="alert">
+            <h3>Open Positions</h3>
+            <ul>
+              <li>
+                <strong>Marketing Director</strong>
+                <ol>
+                  <li>Promote the event to students on campus across all majors, through word-of-mouth, posters, and online</li>
+                </ol>
+              </li>
+              <li>
+                <strong>Facilities Director</strong>
+                <ol>
+                  <li>Manage the logistics of the weekend, from catering to wireless access, to room access</li>
+                  <li>Coordinate with event volunteers</li>
+                </ol>
+              </li>
+              <li>
+                <strong>Corporate Director</strong>
+                <ol>
+                  <li>Reach out to event coaches and judges to come and work with the teams</li>
+                </ol>
+              </li>
+            </ul>
+          </div>
+          <%- controlGroup(studentResponse, 'position') %>
+            <label class="control-label" for="position">Position</label>
+            <div class="controls radio-controls">
+              <label class="radio">
+                <input type="radio" name="position" value="0" data-toggle="radio" <%= (studentResponse.position === 0 ? 'checked' : '') %> />Marketing Director
+              </label>
+              <label class="radio">
+                <input type="radio" name="position" value="1" data-toggle="radio" <%= (studentResponse.position === 1 ? 'checked' : '') %> />Facilities Director
+              </label>
+              <label class="radio">
+                <input type="radio" name="position" value="2" data-toggle="radio" <%= (studentResponse.position === 2 ? 'checked' : '') %> />Corporate Director
+              </label>
+              <label class="radio">
+                <input type="radio" name="position" value="3" data-toggle="radio" <%= (studentResponse.position === 3 ? 'checked' : '') %> />Other
+              </label>
+              <%- errorLabel(studentResponse, 'position'); %>
+            </div>
+          </div>
+          <%- controlGroup(studentResponse, 'commitments') %>
+            <label class="control-label" for="commitments">Commitments</label>
+            <div class="controls radio-controls">
+              <%- contentTag('textarea', studentResponse.commitments, {type:'textarea', rows:'6', name:'commitments', placeholder:"Tell us what other commitments you have during the 2013-2014 school year"}) %>
+              <%- errorLabel(studentResponse, 'commitments'); %>
+            </div>
+          </div>
+          <%- controlGroup(studentResponse, 'whyYou') %>
+            <label class="control-label" for="whyYou">Why You?</label>
+            <div class="controls radio-controls">
+              <%- contentTag('textarea', studentResponse.whyYou, {type:'textarea', rows:'6', name:'whyYou', placeholder:"What makes you amazing?"}) %>
+              <%- errorLabel(studentResponse, 'whyYou'); %>
+            </div>
+          </div>
+          <%- controlGroup(studentResponse, 'whyUs') %>
+            <label class="control-label" for="whyUs">Why Us?</label>
+            <div class="controls radio-controls">
+              <%- contentTag('textarea', studentResponse.whyUs, {type:'textarea', rows:'6', name:'whyUs', placeholder:"Why do you want to help with 54?"}) %>
+              <%- errorLabel(studentResponse, 'whyUs'); %>
+            </div>
+          </div>
+          <%- controlGroup(studentResponse, 'entrepreneurship') %>
+            <label class="control-label" for="entrepreneurship">Entrepreneurship</label>
+            <div class="controls radio-controls">
+              <%- contentTag('textarea', studentResponse.entrepreneurship, {type:'textarea', rows:'6', name:'entrepreneurship', placeholder:"Give us three sentences about your experience or interest in entrepreneurship."}) %>
+              <%- errorLabel(studentResponse, 'entrepreneurship'); %>
+            </div>
+          </div>
+          <div class="controls">
+            <button type="submit" class="btn btn-large btn-success">Submit</button>
+          </div>
+        </form>
+      </div>
