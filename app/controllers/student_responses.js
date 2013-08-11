@@ -34,7 +34,7 @@ var StudentResponses = function () {
           studentResponse.save(function(err, data) {
             if(!err) {
               // Send an email to the applicant
-              content = studentResponse.fullname + ', thanks for your interest in 54.<br /><br />\n\
+              content = 'Thanks for your interest in 54.<br /><br />\n\
       <a href="' + geddy.config.url + '/student_responses/' + studentResponse.id + '">Here is a link to your responses</a>, in case you want to review them.<br /><br />\n\
       Thank you for taking the time to complete our application. We&#39;ll get back to you soon!';
               self.email(studentResponse.netid + '@illinois.edu', studentResponse.fullname, 'Thanks For Your Application', content);
