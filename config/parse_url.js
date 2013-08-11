@@ -5,6 +5,7 @@ module.exports = function (str, component) {
 // + input by: Lorenzo Pisani
 // + input by: Tony
 // + improved by: Brett Zamir (http://brett-zamir.me)
+// + improved by: Ben Ng (http://benng.me)
 // %          note: Based on http://stevenlevithan.com/demo/parseuri/js/assets/parseuri.js
 // %          note: blog post at http://blog.stevenlevithan.com/archives/parseuri
 // %          note: demo at http://stevenlevithan.com/demo/parseuri/js/assets/parseuri.js
