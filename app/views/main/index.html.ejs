@@ -11,6 +11,7 @@
       <ul class="nav">
         <li class="active"><a href="#overview">Overview</a></li>
         <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#contribute">Contribute</a></li>
       </ul> <!-- /nav -->
 
       <!-- Hidden for now
@@ -103,6 +104,28 @@
       <p>
         At the end of day three, teams gather on stage to present their hard work in front of their peers, mentors, and a panel of judges.
       </p>
+    </div>
+  </div>
+</div>
+<div id="contribute" class="row-fluid">
+  <div class="span12">
+    <div class="row-fluid text-center">
+      <h2>Join Us</h2>
+    </div>
+    <div class="row-fluid text-center hidden">
+      <ul class="nav nav-pills">
+        <li class="active">
+          <a href="#contribute-student">I&#39;m A Student</a>
+        </li>
+        <li>
+          <a href="#contribute-sponsor">I&#39;m A Sponsor</a>
+        </li>
+      </ul>
+    </div>
+    <div id="contribute-student" class="formHolder">
+      <%= partial('student_responses/form', {formAction: '', formMethod: 'POST', studentResponse: {errors:{}}}); %>
+    </div>
+    <div id="contribute-sponsor" class="row-fluid formHolder hidden">
     </div>
   </div>
 </div>

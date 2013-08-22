@@ -1,0 +1,80 @@
+<%
+  var isTeam = params.team !== undefined;
+%>
+<div class="response container">
+  <div class="row text-center">
+    <h2><%= studentResponse.fullname %></h2>
+    <p>
+      <strong><%= studentResponse.netid %>@illinois.edu</strong>
+    </p>
+  </div>
+  <% if(!isTeam) { %>
+  <div class="row">
+    <div class="alert alert-success">
+      <h3>Thanks!</h3>
+      <p>
+        <%= studentResponse.fullname %>, thanks for your interest in 54 and for taking the time to complete our application.<br />
+        If you have any questions, please email us at <strong>team@54.io</strong>.
+      </p>
+      <p>
+        We&#39;ll be in touch shortly!
+      </p>
+    </div>
+  </div>
+  <% } %>
+  <div class="row">
+    <% if(!isTeam) { %>
+      <h5>For Your Records</h5>
+      <p>
+        Save this link if you want to keep a copy of this application for your records.
+        <pre>http://54.io/student_responses/<%= studentResponse.id %></pre>
+      </p>
+    <% } else { %>
+      <h5>Share This Application:</h5>
+      <p>
+        <pre>http://54.io/student_responses/<%= studentResponse.id %>?team</pre>
+      </p>
+    <% } %>
+    <table class="table table-bordered">
+      <tr>
+        <th>Question</th>
+        <th>Response</th>
+      </tr>
+      <%
+        var safeFields = {
+          fullname: 'Name'
+        , netid: 'NetID'
+        , major: 'Major'
+        , year: {
+            name: 'Graduation Year'
+          , parse: function (value) {
+              return new String(geddy.config.event.year - value + 4);
+            }
+          }
+        , position: {
+            name: 'Position'
+          , parse: function (value) {
+              return geddy.config.event.positions[value];
+            }
+          }
+        , commitments: 'Commitments'
+        , whyYou: 'Why You?'
+        , whyUs: 'Why Us?'
+        , entrepreneurship: 'Why Entrepreneurship?'
+        };
+
+        for(var key in safeFields) {
+      %>
+      <tr>
+        <td><%= (typeof safeFields[key] === 'object' ? safeFields[key].name : safeFields[key]) %></td>
+        <td><%= (typeof safeFields[key] === 'object' ? safeFields[key].parse(studentResponse[key]) : studentResponse[key]) %></td>
+      </tr>
+      <% } %>
+    </table>
+  </div>
+  <div class="row text-center">
+    <p>
+      <a href="/">54.io</a>
+    </p>
+  </div>
+</div>

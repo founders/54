@@ -1,8 +1,7 @@
+.env
 *.swp
 *.swo
-dist
 *.DS_Store
 *.log
 npm-debug.log
-config/secrets.json
 public/js/core/models.js

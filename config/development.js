@@ -22,11 +22,17 @@ var config = {
 , hostname: null
 , port: 4000
 , model: {
-    defaultAdapter: 'memory'
+    defaultAdapter: 'mongo'
+  }
+, db: {
+    mongo: {
+      dbname: 'fiftyfour'
+    , host: '127.0.0.1'
+    }
   }
 , sessions: {
-    store: 'memory'
-  , key: 'sid'
+    store: 'cookie'
+  , key: 'did'
   , expiry: 14 * 24 * 60 * 60
   }
 };
