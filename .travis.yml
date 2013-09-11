@@ -1,8 +1,5 @@
 language: node_js
 
-npm install -g jake
-
 node_js:
   - "0.10"
 
-script: jake test --trace
