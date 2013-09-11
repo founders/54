@@ -1,6 +1,6 @@
- - npm install -g jake
-
 language: node_js
+
+- npm install -g jake
 
 node_js:
   - "0.10"
