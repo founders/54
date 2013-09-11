@@ -4,7 +4,7 @@ This website is the first impression we will make on most people. Make it count.
 
 **Make this website so beautiful that visitors want to be a part of the event it represents.**
 
-[![Build Status](https://travis-ci.org/[Illinois-Founders]/[54].png)](https://travis-ci.org/[Illinois-Founders]/[54])
+[![Build Status](https://travis-ci.org/Illinois-Founders/54.png)](https://travis-ci.org/Illinois-Founders/54)
 
 ## Notes
 
