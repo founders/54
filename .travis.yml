@@ -4,6 +4,3 @@ script: "sudo $(which npm) test"
 
 node_js:
   - "0.10"
-  
-script: "sudo $(which npm) install geddy"
-script: "sudo $(which npm) install jake"
