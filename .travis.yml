@@ -1,4 +1,8 @@
+ - npm install -g jake
+
 language: node_js
 
 node_js:
   - "0.10"
+
+script: jake test --trace
