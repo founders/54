@@ -1,0 +1,6 @@
+language: node_js
+
+script: "sudo $(which npm) test"
+
+node_js:
+  - "0.10"

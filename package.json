@@ -9,9 +9,14 @@
   , "utilities": "0.0.x"
   , "lodash": "1.3.x"
   , "mandrill-api": "1.0.29"
+  , "jake" : "0.6.x"
   }
 , "devDependencies": {}
+, "scripts": {
+    "test": "geddy jake test --trace"
+  }
 , "engines": {
     "node": "0.10.x"
   }
 }
+
