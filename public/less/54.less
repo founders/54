@@ -14,13 +14,14 @@
 
 // Override fonts
 body {
-  font-family: 'Georgia', serif;
+  font-family: Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  background: #333;
 }
 
 // Navbar
 #mainnav {
   position: absolute;
-  top: 450px;
   left:0;
   width: 100%;
 
@@ -88,23 +89,62 @@ body {
 // The panel with the big 54 logo
 #splash {
   .at2x('/images/working-cropped.png', 1400px, 530px);
+  background-position: center;
 
   .panel;
 
   #logo {
-    width: 320px;
+    width: 240px;
     height: 320px;
     background-repeat: no-repeat;
 
     // Retina logo mixin
-    .at2x('/images/Logo.png', 320px, 320px);
+    .at2x('/images/Logo-web.png', 240px, 320px);
 
     // Center logo
-    margin: 30px auto 60px auto;
+    margin: 30px 0px 0px 9%;
 
     h1 {
       display: none;
       visibility: hidden;
+    }
+  }
+  #cta {
+    h1 {
+      color: white;
+      text-align: left;
+      margin-top: 60px;
+      padding: 10px;
+      font-size: 2.8em;
+      text-shadow: 0px 1px 2px #333;
+    }
+    #netid {
+      width: 200px;
+      height: 25px;
+      margin: 0 8px;
+      border: 2px solid #888;
+      color: #333;
+      font-size: 2em;
+      background: rgba(255,255,255,0.8);
+
+      &:focus {
+        border: 2px solid #ff9600;
+      }
+    }
+
+    #buttan {
+      text-align: left;
+      margin-left: 20px;
+
+      a.btn {
+        width: 70px;
+        background-color: #ff9600;
+        box-shadow: 0px 1px 2px #555;
+
+        &:hover{
+          background-color:#ffab33;
+        }
+      }
     }
   }
 }
@@ -115,7 +155,7 @@ body {
 
   @seperator-color: #777;
 
-  background-color: #000;
+  background-color: #222;
   color: #FFF;
 
   h2 {
@@ -155,6 +195,7 @@ body {
         padding-top: 15px;
       }
       span.ordinary {
+        color: @silver;
         padding-bottom: 15px;
       }
     }
@@ -177,6 +218,10 @@ body {
   }
 }
 
+#overview {
+  margin-top: 20px;
+}
+
 .itemgrid {
   margin: -50px 0 50px 0;
   padding: 100px 0 0 0;
@@ -191,6 +236,10 @@ body {
     font-size: 1.6em;
     margin-top: 15px;
     line-height: 1.8em;
+
+    a {
+      color: @silver;
+    }
   }
 
   .highlight {
@@ -199,6 +248,7 @@ body {
 
   p {
     font-size: 1.3em;
+    font-weight: lighter;
   }
 
   sup {
@@ -235,52 +285,5 @@ body {
     }
 
     padding: 50px 20px 0 20px;
-  }
-}
-
-#contribute {
-  background-color: @black;
-  padding: 50px 0;
-
-  h2 {
-    color: @white;
-    margin-bottom: 50px;
-  }
-
-  ul.nav.nav-pills {
-    display: inline-block;
-  }
-
-  .formHolder {
-    color: #FFF;
-
-    form {
-      .control-label {
-        color: #FFF;
-        font-size: 1.5em;
-        line-height: 1.6em;
-      }
-
-      .controls.radio-controls {
-        margin-top: 12px;
-
-        label {
-          color: #FFF;
-          text-align: left;
-        }
-
-        // Fixes a stupid bug where first element text is too low
-        :first-child {
-          padding-top: 0;
-        }
-      }
-
-      .controls {
-        .label {
-          // Adds some spacing between form errors and the input
-          margin-top: 5px;
-        }
-      }
-    }
   }
 }
