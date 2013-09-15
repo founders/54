@@ -13,7 +13,7 @@
 }
 
 // Override fonts
-body { 
+body {
   font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   background: #333;
@@ -94,31 +94,30 @@ body {
   .panel;
 
   #logo {
-    width: 240px;
-    height: 320px;
-    background-repeat: no-repeat;
-
-    // Retina logo mixin
-    .at2x('/images/Logo-web.png', 240px, 320px);
-
-    // Center logo
-    margin: 30px 0px 0px 9%;
-
     h1 {
       display: none;
       visibility: hidden;
     }
+
+    img {
+      width: 240px;
+      height: 320px;
+    }
+
+    vertical-align: middle;
   }
-  #cta {
+
+  #call-to-action {
     h1 {
       color: white;
       font-family: Georgia;
       text-align: left;
-      margin-top: 60px;
+      margin-top: 20px;
       padding: 10px;
       font-size: 2.8em;
       text-shadow: 0px 1px 2px #333;
     }
+
     #netid {
       width: 200px;
       height: 25px;
@@ -133,21 +132,22 @@ body {
       }
     }
 
-    #buttan {
-      text-align: left;
-      margin-left: 20px;
+    form {
+      /* all */
+      ::-webkit-input-placeholder { color:@silver; }
+      ::-moz-placeholder { color:@silver; } /* firefox 19+ */
+      :-ms-input-placeholder { color:@silver; } /* ie */
+      input:-moz-placeholder { color:@silver; }
 
-      a.btn {
-        width: 70px;
-        background-color: #ff9600;
-        box-shadow: 0px 1px 2px #555;
-
-        &:hover{
-          background-color:#ffab33;
-        }
+      input {
+        color: black;
       }
     }
   }
+}
+
+.navbar .nav>li>a {
+  font-size: 1.2em;
 }
 
 // The dark panel
