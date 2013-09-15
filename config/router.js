@@ -40,4 +40,6 @@ router.get('/').to('Main.index');
 // });
 
 router.resource('student_responses');
+router.get('/signup').to('Main.signup');
+
 exports.router = router;
