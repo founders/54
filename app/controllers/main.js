@@ -38,7 +38,7 @@ var Main = function () {
 		console.log(error.message);
 	}
 
-	api.call('lists', 'subscribe', {id:'738042e901', email: {email: params.NetID+"@illinois.edu"}}, function(error,data){
+	api.call('lists', 'subscribe', {id:'738042e901', email: {email: params.netid+"@illinois.edu"}, double_optin: false}, function(error,data){
 		if (!error){
 			var content = "There's a new subscriber!"
 			self.email(geddy.config.event.teamEmail, geddy.config.event.teamName, params.NetID + ' subscribed to the email list', content);
@@ -49,7 +49,7 @@ var Main = function () {
 			self.email(geddy.config.event.teamEmail, geddy.config.event.teamName, 'There was an error', content);
 		}
 	});
-    
+
     this.respond({params: params}, {
       format: 'html'
     , template: 'app/views/main/index'
