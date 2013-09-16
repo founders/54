@@ -90,6 +90,7 @@ body {
 #splash {
 
   background-position: center center;
+  background-repeat: no-repeat;
 
   .at2x('/images/working-cropped.jpg', 1440px, 530px);
 
@@ -97,14 +98,20 @@ body {
     height: 500px;
   }
 
-  @media (max-width: 987px) {
+  @media (max-width: 1379px) {
     background-size: auto 100%;
+  }
+  @media (min-width: 1380px) {
+    background-size: 100% auto;
   }
 
   .itemgrid;
   margin: 0;
+  padding: 0;
 
   #logo {
+    margin-top: 50px;
+
     h1 {
       display: none;
       visibility: hidden;
@@ -113,12 +120,15 @@ body {
     img {
       width: 240px;
       height: 320px;
+      margin: 0 0;
     }
 
     vertical-align: middle;
   }
 
   #call-to-action {
+    margin-top: 50px;
+
     h1 {
       color: white;
       font-family: Georgia;
@@ -127,6 +137,10 @@ body {
       padding: 10px;
       font-size: 2.8em;
       text-shadow: 0px 1px 2px #333;
+
+      @media (max-width: 979px) {
+        font-size: 2em;
+      }
     }
 
     #netid {
@@ -156,6 +170,10 @@ body {
 
       .input-append {
         width: 150px;
+      }
+
+      .btn {
+        background-color: @illini-orange;
       }
     }
   }
