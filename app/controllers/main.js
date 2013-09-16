@@ -16,7 +16,11 @@
  *
 */
 
-var Main = function () {
+var MailChimpAPI = require('mailchimp').MailChimpAPI
+  , _ = require('lodash')
+  , Main;
+
+Main = function () {
   this.index = function (req, resp, params) {
     this.respond({params: params}, {
       format: 'html'
@@ -25,33 +29,40 @@ var Main = function () {
   };
 
   this.signup = function (req, resp, params) {
-    var self = this;
-
-    var MailChimpAPI = require('mailchimp').MailChimpAPI;
-
-    var apiKey = process.env.MAILCHIMP_API_KEY;
+    var self = this
+    , apiKey = process.env.MAILCHIMP_API_KEY
+    , email = params.netid+'@illinois.edu';
 
     try {
-    	var api = new MailChimpAPI(apiKey, { version :'2.0'});
-	}
-	catch(error){
-		console.log(error.message);
-	}
+      var api = new MailChimpAPI(apiKey, { version :'2.0'});
+    }
+    catch(error){
+      console.log(error.message);
+    }
 
-	api.call('lists', 'subscribe', {id:'738042e901', email: {email: params.netid+"@illinois.edu"}, double_optin: false}, function(error,data){
-		if (!error){
-			var content = "There's a new subscriber!"
-			self.email(geddy.config.event.teamEmail, geddy.config.event.teamName, params.NetID + ' subscribed to the email list', content);
-		}
-		else{
-			console.log(error.message);
-			var content = "There was an error: " + error.message;
-			self.email(geddy.config.event.teamEmail, geddy.config.event.teamName, 'There was an error', content);
-		}
-	});
+    api.call('lists'
+    , 'subscribe'
+      , {id:'738042e901', email: {email: email}, double_optin: false}
+      , function(error,data){
+          var title, content;
+
+          if (!error){
+            title = _.template('{{email}} has just subscribed to 54')({email: email})
+            content = 'Hope you\'re having a good day, team!<br /><br />Much love,<br />The 54 Bot';
+
+            self.email(geddy.config.event.teamEmail, geddy.config.event.teamName, title, content);
+          }
+          else{
+            content = _.template('There was an error subscribing {{email}}: {{msg}}')({email: email, msg: error.message});
+
+            console.log(error.message);
+
+            self.email(geddy.config.event.teamEmail, geddy.config.event.teamName, 'Subscription Error', content);
+          }
+        });
 
     this.respond({params: params}, {
-      format: 'html'
+    format: 'html'
     , template: 'app/views/main/index'
     });
   };
