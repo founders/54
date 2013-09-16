@@ -89,19 +89,20 @@ body {
 // The panel with the big 54 logo
 #splash {
 
-  // This makes more of the header image visible on bigger screens
+  background-position: center center;
+
+  .at2x('/images/working-cropped.jpg', 1440px, 530px);
+
   @media (min-width: 768px) {
     height: 500px;
   }
 
+  @media (max-width: 987px) {
+    background-size: auto 100%;
+  }
+
   .itemgrid;
   margin: 0;
-
-  background: url(/images/working-cropped.jpg) no-repeat bottom center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 
   #logo {
     h1 {
