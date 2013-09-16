@@ -20,7 +20,7 @@ $(function () {
 
   // Pins the navbar to the top of the page
   win.scroll(function () {
-    if(win.scrollTop() > 450) {
+    if(win.scrollTop() > $('#splash').outerHeight()) {
       if(!fixed) {
         nav.addClass('fixed');
       }

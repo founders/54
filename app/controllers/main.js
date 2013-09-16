@@ -23,6 +23,38 @@ var Main = function () {
     , template: 'app/views/main/index'
     });
   };
+
+  this.signup = function (req, resp, params) {
+    var self = this;
+
+    var MailChimpAPI = require('mailchimp').MailChimpAPI;
+
+    var apiKey = process.env.MAILCHIMP_API_KEY;
+
+    try {
+    	var api = new MailChimpAPI(apiKey, { version :'2.0'});
+	}
+	catch(error){
+		console.log(error.message);
+	}
+
+	api.call('lists', 'subscribe', {id:'738042e901', email: {email: params.netid+"@illinois.edu"}, double_optin: false}, function(error,data){
+		if (!error){
+			var content = "There's a new subscriber!"
+			self.email(geddy.config.event.teamEmail, geddy.config.event.teamName, params.NetID + ' subscribed to the email list', content);
+		}
+		else{
+			console.log(error.message);
+			var content = "There was an error: " + error.message;
+			self.email(geddy.config.event.teamEmail, geddy.config.event.teamName, 'There was an error', content);
+		}
+	});
+
+    this.respond({params: params}, {
+      format: 'html'
+    , template: 'app/views/main/index'
+    });
+  };
 };
 
 exports.Main = Main;
