@@ -127,7 +127,11 @@ body {
   }
 
   #call-to-action {
-    margin-top: 50px;
+    margin-top: 72px;
+
+    @media (max-width: 767px) {
+      margin-top: 10px;
+    }
 
     h1 {
       color: white;
@@ -147,18 +151,15 @@ body {
       border: 2px solid #ff9600 !important;
     }
 
-    #netid {
-      width: 200px;
-      height: 25px;
-      margin: 0 8px;
-      border: 2px solid #888;
-      color: #333;
-      font-size: 2em;
-      background: rgba(255,255,255,0.8);
+    #question {
+      font-family:Helvetica;
+      font-size:30px;
+      font-weight:lighter;
+      text-shadow: none;
     }
     
     #register-button {
-      margin-left: 90px;
+      margin-left: 10px;
 
       a { 
       color:white;
