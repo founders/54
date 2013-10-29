@@ -28,6 +28,13 @@ Main = function () {
     });
   };
 
+  this.event = function (req, resp, params) {
+    this.respond({params: params}, {
+      format: 'html'
+    , template: 'app/views/event/index'
+    });
+  };
+
   this.signup = function (req, resp, params) {
     var self = this
     , apiKey = process.env.MAILCHIMP_API_KEY
