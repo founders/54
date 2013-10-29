@@ -20,6 +20,7 @@
 var router = new geddy.RegExpRouter();
 
 router.get('/').to('Main.index');
+router.get('/event').to('Main.event');
 
 // Basic routes
 // router.match('/moving/pictures/:id', 'GET').to('Moving.pictures');
@@ -40,6 +41,5 @@ router.get('/').to('Main.index');
 // });
 
 router.resource('student_responses');
-router.get('/signup').to('Main.signup');
 
 exports.router = router;
