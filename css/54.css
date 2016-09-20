@@ -1702,3 +1702,6 @@ input.search-query{padding-right:6px;padding-left:6px;margin-bottom:0;border-rad
 #event #schedule #sat,#event #schedule #sun{padding-top:90px}
 #event #blurb{margin-top:40px}
 #event .sponsor img{width:10%;height:10%;display:inline}@media (max-width:767px){#event .sponsor img{width:40%;height:40%}}
+.founders-brand{position:absolute;top:20px;right:20px;opacity:0.5;transition:opacity linear 0.1s}
+.founders-brand img{height:50px;width:150px;}
+.founders-brand:hover{opacity:1}
