@@ -1,0 +1,324 @@
+@font-face {
+    font-family: Apercu-Bold;
+    src: url("assets/apercu/ApercuBoldPro.otf");
+}
+
+@font-face {
+    font-family: Apercu-Medium;
+    src: url("assets/apercu/ApercuMediumPro.otf");
+}
+
+@font-face {
+    font-family: Apercu-Regular;
+    src: url("assets/apercu/ApercuRegularPro.otf");
+}
+
+@font-face {
+    font-family: Apercu-Regular-Italic;
+    src: url("assets/apercu/ApercuRegularItalicPro.otf");
+}
+
+html {
+    background-color: RGB(51,51,51);
+}
+
+.cta {
+    background-color: RGB(255,120,0);
+    font-family: Apercu-Regular;
+    color: RGB(255,255,255);
+    outline: none;
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.cta:hover {
+    background-color: RGB(204,88,3);
+}
+
+/* NAVIGATION BAR */
+
+.navBarOuter {
+    position: fixed;
+    background-color: RGB(25,25,25);
+    height: 80px;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    font-family: Apercu-Medium;
+    font-size: 17px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.navBarInner {
+    width: 95%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 1.875em;
+}
+
+#smallLogo {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    margin-top: 17px;
+    float: left;
+    height: 46px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#smallLogo:hover {
+    opacity: 0.75;
+}
+
+.navBarInner nav {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    float: right;
+}
+
+.navBarInner nav a {
+    margin: 0 0 0 20px;
+    color: RGBA(255,255,255,.65);
+    line-height: 80px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.navBarInner nav a:hover {
+    color: RGB(255,255,255);
+}
+
+#navCTA {
+    margin-top: 22px;
+    float: right;
+    height: 36px;
+    width: 90px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* HEADER */
+
+.headerOuter {
+    position: absolute;
+    display: block;
+    margin-top: 146px;
+    left: 0;
+    width: 100%;
+}
+
+.headerInner {
+    margin: 0 auto;
+    width: 27.8%;
+    min-width: 350px;
+}
+
+#largeLogo {
+    display: block;
+    margin: auto;
+    height: 204px;
+    pointer-events: none;
+}
+
+.headerInner h3, .headerInner p {
+    color: RGB(255, 255, 255);
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.headerInner h3 {
+    display: block;
+    margin: 0 auto;
+    margin-top: 8px;
+    width: 350px;
+    font-family: Apercu-Bold;
+    font-size: 24px;
+}
+
+.headerInner p {
+    margin-top: 10px;
+    padding-bottom: 13px;
+    font-family: Apercu-Regular;
+    font-size: 20px;
+}
+
+#mainCTA {
+    display: block;
+    margin: auto;
+    height: 49px;
+    width: 127px;
+    font-size: 20px;
+}
+
+/* ABOUT */
+
+.aboutOuter {
+    position: absolute;
+    margin-top: 616px;
+    width: 100%;
+    z-index: 10;
+}
+
+.upCrossSlant {
+    display: block;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+/* May need to increase height of SVG */
+.aboutInner {
+    position: absolute;
+    margin-top: -1px;
+    height: 249px;
+    width: 100%;
+    z-index: 10000;
+    background-color: RGB(34,34,34);
+}
+
+.aboutInner p {
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 57%;
+    max-width: 676px;
+    color: RGB(255,255,255);
+    font-family: Apercu-Regular;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.aboutOuter .downSlant {
+    position: absolute;
+    margin-top: 247px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* FAQ */
+
+.faqOuter {
+    position: absolute;
+    margin-top: 1181px;
+    padding-bottom: 111px;
+    height: 700px;
+    width: 100%;
+    z-index: 10;
+}
+
+.whoApply {
+    top: 0;
+}
+
+.whatFor, .otherQuestion {
+    margin-top: 90px;
+}
+
+.faqOuter h3 {
+    margin: 0 auto;
+    width: 57%;
+    max-width: 676px;
+    color: RGB(255,255,255);
+    font-family: Apercu-Bold;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.faqOuter p {
+    margin: 0 auto;
+    padding-top: 30px;
+    width: 57%;
+    max-width: 676px;
+    color: RGB(255,255,255);
+    font-family: Apercu-Regular;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.faqOuter span {
+    color: RGB(255,120,0);
+}
+
+.faqOuter a {
+    color: RGB(255,120,0);
+    text-decoration: none;
+}
+
+.faqOuter a:hover {
+    text-decoration: underline;
+}
+
+/* Schedule */
+
+.scheduleOuter {
+    position: absolute;
+    margin-top: 2061px;
+    width: 100%;
+    z-index: 10;
+}
+
+.upSlant {
+    display: block;
+    width: 100%;
+}
+
+.scheduleInner {
+    position: absolute;
+    margin-top: -1px;
+    height: 290PX;
+    width: 100%;
+    z-index: 10;
+    background-color: RGB(34,34,34);
+}
+
+.schedule {
+    margin: 0 auto;
+    margin-top: 43px;
+    max-width: 676px;
+}
+
+.plan, .build, .launch {
+    float: left;
+}
+
+.build {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.schedule h3 {
+    color: RGB(255,255,255);
+    font-family: Apercu-Bold;
+    font-size: 24px;
+    letter-spacing: 1px;   
+}
+
+.schedule p {
+    color: RGB(255,255,255);
+    font-family: Apercu-Regular;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.schedule span {
+    color: RGB(255,120,0);
+}
+
+.scheduleOuter .downSlant {
+    position: absolute;
+    display: block;
+    margin-top: 288px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+}
