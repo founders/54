@@ -18,8 +18,45 @@
     src: url("assets/apercu/ApercuRegularItalicPro.otf");
 }
 
+@font-face {
+    font-family: Roboto-Bold;
+    src: url("assets/roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url("assets/roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Thin;
+    src: url("assets/roboto/Roboto-Thin.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url("assets/roboto/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Italic;
+    src: url("assets/roboto/Roboto-Italic.ttf");
+}
+
+@font-face {
+    font-family: Roboto-LightItalic;
+    src: url("assets/roboto/Roboto-LightItalic.ttf");
+}
+
 html {
     background-color: RGB(51,51,51);
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
 }
 
 .cta {
@@ -137,15 +174,18 @@ html {
     margin: 0 auto;
     margin-top: 8px;
     width: 350px;
-    font-family: Apercu-Bold;
+    /*font-family: Apercu-Bold;*/
+	font-family: Roboto-Thin;
     font-size: 24px;
 }
 
 .headerInner p {
     margin-top: 10px;
     padding-bottom: 13px;
-    font-family: Apercu-Regular;
+    /*font-family: Apercu-Regular;*/
+	font-family: Roboto-Light;
     font-size: 20px;
+	color: #AAA;
 }
 
 #mainCTA {
@@ -190,9 +230,11 @@ html {
     width: 57%;
     max-width: 676px;
     color: RGB(255,255,255);
-    font-family: Apercu-Regular;
+    /*font-family: Apercu-Regular;*/
+	font-family: Roboto-Light;
     font-size: 20px;
     letter-spacing: 1px;
+	line-height: 34px;
 }
 
 .aboutOuter .downSlant {
@@ -228,8 +270,10 @@ html {
     width: 57%;
     max-width: 676px;
     color: RGB(255,255,255);
-    font-family: Apercu-Bold;
-    font-size: 24px;
+    /*font-family: Apercu-Bold;*/
+	font-family: Roboto-Bold;
+    font-size: 26px;
+	color: #FF7800;
     letter-spacing: 1px;
 }
 
@@ -239,7 +283,8 @@ html {
     width: 57%;
     max-width: 676px;
     color: RGB(255,255,255);
-    font-family: Apercu-Regular;
+    /*font-family: Apercu-Regular;*/
+	font-family: Roboto-Light;
     font-size: 20px;
     letter-spacing: 1px;
 }
@@ -254,7 +299,8 @@ html {
 }
 
 .faqOuter a:hover {
-    text-decoration: underline;
+    /*text-decoration: underline;*/
+	color: #FF9911;
 }
 
 /* Schedule */
@@ -297,16 +343,19 @@ html {
 
 .schedule h3 {
     color: RGB(255,255,255);
-    font-family: Apercu-Bold;
+    /*font-family: Apercu-Bold;*/
+	font-family: Roboto-Light;
     font-size: 24px;
-    letter-spacing: 1px;   
+    letter-spacing: 1px;
 }
 
 .schedule p {
     color: RGB(255,255,255);
-    font-family: Apercu-Regular;
+    /*font-family: Apercu-Regular;*/
+	font-family: Roboto-Light;
     font-size: 20px;
     letter-spacing: 1px;
+	line-height: 30px;
 }
 
 .schedule span {
