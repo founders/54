@@ -61,11 +61,11 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background-color: #7DABFF;
+	background-color: RGB(255,150,0);
 }
 
 ::-webkit-scrollbar-thumb:active {
-	background-color: #699EFF;
+	background-color: RGB(255,180,40);
 }
 
 html {
