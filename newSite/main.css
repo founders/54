@@ -1,24 +1,4 @@
 @font-face {
-    font-family: Apercu-Bold;
-    src: url("assets/apercu/ApercuBoldPro.otf");
-}
-
-@font-face {
-    font-family: Apercu-Medium;
-    src: url("assets/apercu/ApercuMediumPro.otf");
-}
-
-@font-face {
-    font-family: Apercu-Regular;
-    src: url("assets/apercu/ApercuRegularPro.otf");
-}
-
-@font-face {
-    font-family: Apercu-Regular-Italic;
-    src: url("assets/apercu/ApercuRegularItalicPro.otf");
-}
-
-@font-face {
     font-family: Roboto-Bold;
     src: url("assets/roboto/Roboto-Bold.ttf");
 }
@@ -48,20 +28,23 @@
     src: url("assets/roboto/Roboto-LightItalic.ttf");
 }
 
-html {
-    background-color: RGB(51,51,51);
-	margin: 0;
-	padding: 0;
+@font-face {
+    font-family: Roboto-Medium;
+    src: url("assets/roboto/Roboto-Medium.ttf");
 }
 
-body {
-	margin: 0;
-	padding: 0;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: RGB(51,51,51);
 }
 
 .cta {
     background-color: RGB(255,120,0);
-    font-family: Apercu-Regular;
+    font-family: Roboto-Light;
     color: RGB(255,255,255);
     outline: none;
     border: none;
@@ -78,15 +61,16 @@ body {
 
 .navBarOuter {
     position: fixed;
-    background-color: RGB(25,25,25);
     height: 80px;
     width: 100%;
     top: 0%;
     left: 0%;
-    font-family: Apercu-Medium;
+    font-family: Roboto-Regular;
     font-size: 17px;
     z-index: 100;
     overflow: hidden;
+    background-color: RGB(25,25,25);
+    opacity: 1.0;
 }
 
 .navBarInner {
@@ -108,7 +92,7 @@ body {
 }
 
 #smallLogo:hover {
-    opacity: 0.75;
+    opacity: 0.8;
 }
 
 .navBarInner nav {
@@ -145,7 +129,7 @@ body {
 .headerOuter {
     position: absolute;
     display: block;
-    margin-top: 146px;
+    margin-top: 150px;
     left: 0;
     width: 100%;
 }
@@ -174,18 +158,16 @@ body {
     margin: 0 auto;
     margin-top: 8px;
     width: 350px;
-    /*font-family: Apercu-Bold;*/
-	font-family: Roboto-Thin;
+    font-family: Roboto-Thin;
     font-size: 24px;
 }
 
 .headerInner p {
     margin-top: 10px;
-    padding-bottom: 13px;
-    /*font-family: Apercu-Regular;*/
-	font-family: Roboto-Light;
+    padding-bottom: 23px;
+	font-family: Roboto-Thin;
     font-size: 20px;
-	color: #AAA;
+	color: RGB(170,170,170);
 }
 
 #mainCTA {
@@ -230,7 +212,6 @@ body {
     width: 57%;
     max-width: 676px;
     color: RGB(255,255,255);
-    /*font-family: Apercu-Regular;*/
 	font-family: Roboto-Light;
     font-size: 20px;
     letter-spacing: 1px;
@@ -250,9 +231,9 @@ body {
 
 .faqOuter {
     position: absolute;
-    margin-top: 1181px;
+    margin-top: 1171px;
     padding-bottom: 111px;
-    height: 700px;
+    height: 668px;
     width: 100%;
     z-index: 10;
 }
@@ -262,7 +243,7 @@ body {
 }
 
 .whatFor, .otherQuestion {
-    margin-top: 90px;
+    margin-top: 58px;
 }
 
 .faqOuter h3 {
@@ -270,20 +251,18 @@ body {
     width: 57%;
     max-width: 676px;
     color: RGB(255,255,255);
-    /*font-family: Apercu-Bold;*/
 	font-family: Roboto-Bold;
     font-size: 26px;
-	color: #FF7800;
+	color: RGB(255,120,0);
     letter-spacing: 1px;
 }
 
 .faqOuter p {
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 22px;
     width: 57%;
     max-width: 676px;
     color: RGB(255,255,255);
-    /*font-family: Apercu-Regular;*/
 	font-family: Roboto-Light;
     font-size: 20px;
     letter-spacing: 1px;
@@ -299,15 +278,14 @@ body {
 }
 
 .faqOuter a:hover {
-    /*text-decoration: underline;*/
-	color: #FF9911;
+	color: RGB(255,153,17);
 }
 
-/* Schedule */
+/* SCHEDULE */
 
 .scheduleOuter {
     position: absolute;
-    margin-top: 2061px;
+    margin-top: 2015px;
     width: 100%;
     z-index: 10;
 }
@@ -320,7 +298,7 @@ body {
 .scheduleInner {
     position: absolute;
     margin-top: -1px;
-    height: 290PX;
+    height: 298px;
     width: 100%;
     z-index: 10;
     background-color: RGB(34,34,34);
@@ -328,7 +306,7 @@ body {
 
 .schedule {
     margin: 0 auto;
-    margin-top: 43px;
+    margin-top: 60px;
     max-width: 676px;
 }
 
@@ -343,15 +321,14 @@ body {
 
 .schedule h3 {
     color: RGB(255,255,255);
-    /*font-family: Apercu-Bold;*/
-	font-family: Roboto-Light;
+	font-family: Roboto-Regular;
     font-size: 24px;
     letter-spacing: 1px;
 }
 
 .schedule p {
+    padding-top: 20px;
     color: RGB(255,255,255);
-    /*font-family: Apercu-Regular;*/
 	font-family: Roboto-Light;
     font-size: 20px;
     letter-spacing: 1px;
@@ -362,12 +339,90 @@ body {
     color: RGB(255,120,0);
 }
 
-.scheduleOuter .downSlant {
+.scheduleOuter .downCrossSlant {
     position: absolute;
     display: block;
-    margin-top: 288px;
+    margin-top: 296px;
     left: 0;
     right: 0;
     width: 100%;
     z-index: 10;
+}
+
+/* SPONSORS */
+
+.sponsorsOuter {
+    position: absolute;
+    margin-top: 2618px;
+    width: 100%;
+    height: 97px;
+    z-index: 10;
+}
+
+.sponsorsInner h3 {
+    text-align: center;
+    color: RGB(255,255,255);
+    font-family: Roboto-LightItalic;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* FOOTER */
+
+.footerOuter {
+    position: absolute;
+    margin-top: 2715px;
+    height: 80px;
+    width: 100%;
+    z-index: 100;
+    overflow: hidden;
+    background-color: RGB(25,25,25);
+    font-family: Roboto-Regular;
+    font-size: 17px;
+}
+
+.footerInner {
+    width: 95%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 1.875em;
+}
+
+.email {
+    float: left;
+    cursor: pointer;
+    opacity: .65;
+}
+
+.email:hover {
+    opacity: 1.0;
+}
+
+.planeIcon {
+    margin-top: 25px;
+    height: 30px;
+    right: 0;
+}
+
+.email a {
+    float: right;
+    padding-left: 20px;
+    color: RGB(255,255,255);
+    text-decoration: none;
+    line-height: 80px;
+}
+
+#foundersLogo {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    margin-top: 17px;
+    float: right;
+    height: 46px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#foundersLogo:hover {
+    opacity: 0.8;
 }
