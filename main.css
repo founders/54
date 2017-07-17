@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 @font-face {
     font-family: Roboto-Bold;
     src: url("assets/roboto/Roboto-Bold.ttf");
@@ -33,33 +38,8 @@
     src: url("assets/roboto/Roboto-Medium.ttf");
 }
 
-::-webkit-scrollbar {
-	width: 12px;
-}
-
-::-webkit-scrollbar-track {
-	background-color: RGB(25,25,25);
-}
-
-::-webkit-scrollbar-thumb {
-	background-color: RGB(255,120,0);
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background-color: RGB(255,150,0);
-}
-
-::-webkit-scrollbar-thumb:active {
-	background-color: RGB(255,180,40);
-}
-
 html {
     background-color: RGB(51,51,51);
-}
-
-* {
-    margin: 0;
-    padding: 0;
 }
 
 .cta {
@@ -70,7 +50,7 @@ html {
     border: none;
     border-radius: 3px 3px 3px 3px;
     cursor: pointer;
-    transition: .2s;
+    transition: .1s;
 }
 
 .cta:hover {
@@ -89,8 +69,7 @@ html {
     font-size: 17px;
     z-index: 100;
     overflow: hidden;
-    background-color: RGB(25,25,25);
-    opacity: 1.0;
+    background-color: RGBA(25,25,25,1);
 }
 
 .navBarInner {
@@ -108,7 +87,7 @@ html {
     float: left;
     height: 46px;
     cursor: pointer;
-    transition: .2s;
+    transition: .1s;
 }
 
 #smallLogo:hover {
@@ -128,7 +107,7 @@ html {
     line-height: 80px;
     letter-spacing: 1px;
     text-decoration: none;
-    transition: .2s;
+    transition: .1s;
 }
 
 .navBarInner nav a:hover {
@@ -214,7 +193,6 @@ html {
     width: 100%;
 }
 
-/* May need to increase height of SVG */
 .aboutInner {
     position: absolute;
     margin-top: -1px;
@@ -436,13 +414,14 @@ html {
     position: relative;
     display: inline-block;
     margin: 0;
-    margin-top: 17px;
+    margin-top: 20px;
     float: right;
-    height: 46px;
+    height: 40px;
     cursor: pointer;
-    transition: .2s;
+    transition: .1s;
+    opacity: .8;
 }
 
 #foundersLogo:hover {
-    opacity: 0.8;
+    opacity: 1.0;
 }
