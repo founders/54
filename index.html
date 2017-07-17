@@ -7,12 +7,22 @@
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
+        <script>
+            window.addEventListener('scroll', function(e) {
+                console.log(document.body.scrollTop);
+                if (document.body.scrollTop == 0)
+                    document.getElementById("navBar").style.backgroundColor = "RGBA(25,25,25,1)";
+                else if (document.body.scrollTop > 0) {
+                    document.getElementById("navBar").style.backgroundColor = "RGBA(25,25,25,.75)";
+                }
+            });
+        </script>
         <!--Navigation Bar-->
         <div class="navBarOuter" id="navBar">
             <div class="navBarInner">
                 <img id="smallLogo" src="assets/logos/smallLogo.png">
-                <button type="button" class="cta" id="navCTA">Apply</button>
-                <nav>
+                <button type="button" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSc9s0WnmCz6BrcrFzskwoGHnP7peaooK2xYbU7s8DDrgav-nA/viewform'" class="cta" id="navCTA">Apply</button>
+                <nav id="navigation">
                     <a href="#about">About</a>
                     <a href="#faq">FAQ</a>
                     <a href="#schedule">Schedule</a>
@@ -26,7 +36,7 @@
                 <img id="largeLogo" src="assets/logos/largeLogo.png">
                 <h3>Build a startup from the ground up.</h3>
                 <p>Sept. 22-24, <span style="font-family: Roboto-LightItalic;">University of Illinois</span></p>
-                <button type="button" class="cta" id="mainCTA">Apply</button>
+                <button type="button" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSc9s0WnmCz6BrcrFzskwoGHnP7peaooK2xYbU7s8DDrgav-nA/viewform'" class="cta" id="mainCTA">Apply</button>
             </div>
         </header>
         <!--About-->
@@ -153,7 +163,7 @@
                     </object>
                     <a href="mailto:team@54.io" id="teamEmail">team@54.io</a>
                 </div>
-                <img id="foundersLogo" src="assets/logos/foundersLogo.png">
+                <img id="foundersLogo" src="assets/logos/foundersLogo.png" onclick="location.href='http://founders.illinois.edu/'">
             </footer>
         </div>
     </body>
