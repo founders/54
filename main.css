@@ -388,12 +388,7 @@ html {
 
 .email {
     float: left;
-    cursor: pointer;
-    opacity: .65;
-}
-
-.email:hover {
-    opacity: 1.0;
+    color: #FFF;
 }
 
 .planeIcon {
@@ -403,11 +398,15 @@ html {
 }
 
 .email a {
-    float: right;
-    padding-left: 20px;
+    /*float: right;*/
+    /*padding-left: 20px;*/
     color: RGB(255,255,255);
-    text-decoration: none;
+    text-decoration: underline;
     line-height: 80px;
+}
+
+.email a:hover {
+    opacity: .8;
 }
 
 #foundersLogo {
