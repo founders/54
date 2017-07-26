@@ -79,6 +79,10 @@ html {
     padding: 0 1.875em;
 }
 
+.navBarInner .icon {
+    display: none;
+}
+
 #smallLogo {
     position: relative;
     display: inline-block;
@@ -418,9 +422,151 @@ html {
     height: 40px;
     cursor: pointer;
     transition: .1s;
-    opacity: .8;
 }
 
 #foundersLogo:hover {
-    opacity: 1.0;
+    opacity: .8;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 585px) {
+    
+    /* NAVIGATION BAR */
+    
+    .navBarInner a {
+        display: none;
+    }
+    
+    #navCTA {
+        display: none;
+    }
+    
+    .navBarInner a.icon {
+        float: right;
+        display: block;
+    }
+    
+    .navBarInner.responsive {
+        position: relative;
+    }
+    
+    .navBarInner.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    
+    .navBarInner.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    
+    /* ABOUT */
+    
+    .aboutInner p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+@media only screen and (max-width: 983px) {
+    
+    /* FAQ */
+    
+    .faqOuter {
+        margin-top: 1200px;
+    }
+    
+    .faqOuter h3 {
+        font-size: 21px;
+    }
+    .faqOuter p {
+        font-size: 16px;
+        padding-top: 17px;
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    .faqOuter {
+        margin-top: 1070px;
+    }
+}
+
+@media only screen and (max-width: 477px) {
+    .faqOuter {
+        margin-top: 1000px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .faqOuter {
+        margin-top: 993px;
+    }
+    
+    .faqOuter h3 {
+        margin-left: 49px;
+    }
+    
+    .faqOuter p {
+        width: 300px;
+    }
+    
+    .whatFor, .otherQuestion {
+        margin-top: 46px;
+    }
+}
+
+@media only screen and (max-width: 443px) {
+    .faqOuter {
+        margin-top: 969px;
+    }
+}
+
+@media only screen and (max-width: 671px) {
+    .schedule {
+        margin-top: 60px;
+        margin-left: 12%;
+    }
+
+    .schedule h3 {
+        font-size: 19px;
+        letter-spacing: 0px;
+    }
+
+    .schedule p {
+        padding-top: 10px;
+        font-size: 16px;
+        letter-spacing: 0px;
+        line-height: 20px;
+    }
+}
+
+@media only screen and (max-width: 594px) {
+    .schedule {
+        margin-top: 70px;
+        margin-left: 6%;
+    }
+    
+    .build {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 493px) {
+    .schedule {
+        margin-top: 38px;
+        margin-left: 18%;
+    }
+    
+    .build {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .launch {
+        padding-top: 10px;
+    }
 }

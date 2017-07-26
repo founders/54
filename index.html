@@ -20,7 +20,7 @@
         </script>
         <!--Navigation Bar-->
         <div class="navBarOuter" id="navBar">
-            <div class="navBarInner">
+            <div class="navBarInner" id="navBar">
                 <img id="smallLogo" src="assets/logos/smallLogo.png">
                 <button type="button" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSc9s0WnmCz6BrcrFzskwoGHnP7peaooK2xYbU7s8DDrgav-nA/viewform'" class="cta" id="navCTA">Apply</button>
                 <nav id="navigation">
@@ -28,6 +28,7 @@
                     <a href="#faq">FAQ</a>
                     <a href="#schedule">Schedule</a>
                     <a href="#sponsors">Sponsors</a>
+                    <a href="javascript:void(0);" class="icon" onclick="var x = document.getElementById('navBar'); if (x.className == 'navBarInner') { x.className += ' responsive'; } else { x.className = 'navBarInner'; }">&#9776;</a>
                 </nav>
             </div>
         </div>
