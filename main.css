@@ -173,12 +173,39 @@ html {
 	color: RGB(170,170,170);
 }
 
+.buttons {
+    margin: auto;
+    width: 339px;
+}
+
 #mainCTA {
     display: block;
-    margin: auto;
+    position: absolute;
     height: 49px;
     width: 127px;
     font-size: 20px;
+}
+
+.video {
+    background-color: RGB(51,51,51);
+    font-family: Roboto-Light;
+    font-size: 20px;
+    color: RGB(255,255,255);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: .1s;
+    height: 49px;
+    float: right;
+    background: url("assets/play.png") no-repeat 0px center;
+    background-size: 24px;
+    padding-left: 35px;
+    position: absolute;
+    margin-left: 160px;
+}
+
+.video:hover {
+    opacity: .75;
 }
 
 [data-tooltip] {
@@ -196,14 +223,12 @@ html {
 
 [data-tooltip]:before {
     position: absolute;
-    bottom: 138%;
+    bottom: -138%;
     left: 44%;
     margin-bottom: 5px;
     margin-left: -80px;
     padding: 7px;
     width: 160px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
     border-radius: 3px;
     background-color: RGB(255,120,0);
     color: #fff;
@@ -215,14 +240,13 @@ html {
 
 [data-tooltip]:after {
     position: absolute;
-    bottom: 138%;
+    bottom: -35%; /* For triangle */
     left: 50%;
     margin-left: -5px;
     width: 0;
-    border-top: 5px solid RGB(255,120,0);
-    border-top: 5px solid RGB(255,120,0);
-    border-right: 5px solid transparent;
     border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid RGB(255,120,0);
     content: " ";
     font-size: 0;
     line-height: 0;
