@@ -354,12 +354,12 @@ html {
 }
 
 .faqOuter a {
-    color: RGB(255,120,0);
-    text-decoration: none;
+    color: #FFF;
+    text-decoration: underline;
 }
 
 .faqOuter a:hover {
-	color: RGB(255,153,17);
+    opacity: .75;
 }
 
 /* SCHEDULE */
@@ -486,6 +486,7 @@ html {
     color: RGB(255,255,255);
     text-decoration: underline;
     line-height: 80px;
+    cursor: pointer;
 }
 
 .email a:hover {
