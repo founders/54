@@ -319,34 +319,54 @@ html {
     z-index: 10;
 }
 
-.whoApply {
-    top: 0;
-}
-
-.whatFor, .otherQuestion {
-    margin-top: 58px;
-}
-
-.faqOuter h3 {
+.faqInner {
+    position: relative;
     margin: 0 auto;
     width: 57%;
     max-width: 676px;
-    color: RGB(255,255,255);
-	font-family: Roboto-Bold;
-    font-size: 26px;
+}
+
+.application {
+    float: left;
+}
+
+.general {
+    margin-left: 52%;
+}
+
+.duringWeekend {
+    float: left;
+    padding-top: 10px;
+}
+
+.logistics {
+    padding-top: 45px;
+    margin-left: 52%;
+}
+
+.faqInner h3 {
+    font-family: Roboto-Light;
+    font-size: 20px;
 	color: RGB(255,120,0);
     letter-spacing: 1px;
 }
 
-.faqOuter p {
-    margin: 0 auto;
-    padding-top: 22px;
-    width: 57%;
-    max-width: 676px;
+.question h3 {
+    font-family: Roboto-Light;
+    font-size: 16px;
+	color: RGB(255,120,0);
+    letter-spacing: 1px;
+    padding-top: 10px;
+    max-width: 315px;
+}
+
+.question p {
+    max-width: 315px;
     color: RGB(255,255,255);
 	font-family: Roboto-Light;
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 1px;
+    padding-top: 10px;
 }
 
 .faqOuter span {
@@ -356,16 +376,26 @@ html {
 .faqOuter a {
     color: #FFF;
     text-decoration: underline;
+    transition: .1s;
 }
 
 .faqOuter a:hover {
     opacity: .75;
 }
 
+.arrow {
+    height: 10px;
+}
+
+.question h3 span {
+    padding-left: 10px;
+}
+
 /* SCHEDULE */
 
 .scheduleOuter {
     position: absolute;
+    display: block;
     margin-top: 2015px;
     width: 100%;
     z-index: 10;
@@ -434,25 +464,35 @@ html {
 
 .sponsorsOuter {
     position: absolute;
-    margin-top: 2618px;
+    margin-top: 2600px;
     width: 100%;
     height: 97px;
     z-index: 10;
 }
 
-.sponsorsInner h3 {
-    text-align: center;
-    color: RGB(255,255,255);
-    font-family: Roboto-LightItalic;
-    font-size: 24px;
-    letter-spacing: 1px;
+.sponsorsInner {
+    width: 676px;
+    margin: auto;
 }
+
+.pixo, .serra, .slf, .ceterus {
+    height: 80px;
+}
+
+.pixo, .slf {
+    padding-right: 25px;
+}
+
+.serra {
+    padding-top: 25px;
+    margin-left: 10%;
+} 
 
 /* FOOTER */
 
 .footerOuter {
     position: absolute;
-    margin-top: 2715px;
+    margin-top: 2875px;
     height: 80px;
     width: 100%;
     z-index: 100;
