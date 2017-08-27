@@ -10,7 +10,6 @@
         <script>
             // Changes navbar opacity on scroll
             window.addEventListener('scroll', function(e) {
-                console.log(document.body.scrollTop);
                 if (document.body.scrollTop == 0)
                     document.getElementById("navBar").style.backgroundColor = "RGBA(25,25,25,1)";
                 else if (document.body.scrollTop > 0) {
@@ -22,12 +21,12 @@
         <div class="navBarOuter" id="navBar">
             <div class="navBarInner" id="navBar">
                 <img id="smallLogo" src="assets/logos/smallLogo.png">
-                <button type="button" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSc9s0WnmCz6BrcrFzskwoGHnP7peaooK2xYbU7s8DDrgav-nA/viewform'" class="cta" id="navCTA">Apply</button>
+                <button type="button" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSe-mhWTU7Wf_kEJ8gU5saXAJpnT8Eu-TeLdsTq9v7ubu2iQZQ/viewform?usp=sf_link'" class="cta" id="navCTA">Apply</button>
                 <nav id="navigation">
-                    <a href="#about">About</a>
-                    <a href="#faq">FAQ</a>
-                    <a href="#schedule">Schedule</a>
-                    <a href="#sponsors">Sponsors</a>
+                    <a id="aboutNav" href="#aboutAnchor">About</a>
+                    <a id="faqNav" href="#faqAnchor">FAQ</a>
+                    <a id="scheduleNav" href="#schedule">Schedule</a>
+                    <a id="sponsorsNav" href="#sponsors">Sponsors</a>
                     <a href="javascript:void(0);" class="icon" onclick="var x = document.getElementById('navBar'); if (x.className == 'navBarInner') { x.className += ' responsive'; } else { x.className = 'navBarInner'; }">&#9776;</a>
                 </nav>
             </div>
@@ -35,15 +34,16 @@
         <!--Header-->
         <header class="headerOuter">
             <div class="headerInner">
-                <img id="largeLogo" src="assets/logos/largeLogo.png">
+                <img id="largeLogo" src="assets/logos/newLogo.png">
                 <h3>Build a startup from the ground up.</h3>
-                <p>Sept. 22-24, <span style="font-family: Roboto-LightItalic;">University of Illinois</span></p>
+                <p id="aboutAnchor">Sept. 22-24, <span style="font-family: Roboto-LightItalic;">Siebel Center</span></p>
                 <div class="buttons">
-                    <button type="button" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSc9s0WnmCz6BrcrFzskwoGHnP7peaooK2xYbU7s8DDrgav-nA/viewform'" class="cta" id="mainCTA" data-tooltip="Applications open in the end of August">Apply</button>
+                    <button type="button" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSe-mhWTU7Wf_kEJ8gU5saXAJpnT8Eu-TeLdsTq9v7ubu2iQZQ/viewform?usp=sf_link'" class="cta" id="mainCTA" data-tooltip="Applications open in the end of August">Apply</button>
                     <button type="button" class="video" onclick="location.href='https://www.youtube.com/watch?v=4Wn_DY6BCpU'">Watch the Video</button>
                 </div>
             </div>
         </header>
+        <div class="aboutAnchor" style="display: none; margin-top: 110px;"></div><!--ANCHOR-->
         <!--About-->
         <section class="aboutOuter" id="about">
             <!--Divider-->
@@ -62,7 +62,7 @@
                 <p>54 is a 3-day event where students from different backgrounds come together to form teams and launch a successful startup. No experience required. Just bring yourself, some friends and good ideas. Food and drinks will be provided.</p>
             </div>
             <!--Divider-->
-            <object type="image/svg+xml" data="assets/vectors/downSlant.svg" class="downSlant">
+            <object type="image/svg+xml" data="assets/vectors/downSlant.svg" class="downSlant" id="faqAnchor">
                 <svg width="2880px" height="247px" viewBox="0 0 2880 247" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <g id="UpwardsDivider" fill-rule="nonzero" fill="#222222">
@@ -74,22 +74,94 @@
         </section>
         <!--FAQ-->
         <section class="faqOuter" id="faq">
-            <div class="whoApply">
-                <h3>WHO SHOULD APPLY?</h3>
-                <p>Whether you’re an artist or a social worker, a doctor or an entrepreneur, want to change the world with your ideas, or simply just want to have some fun, 54 is for you!<br><br>
-                <span>Have an idea?</span> 54 is the perfect place to meet team members that can help bring your idea to life.<br>
-                <span>Don’t have an idea?</span> No problem. Bring a unique perspective. Teams will need designers, developers, marketers, and you!</p>
-            </div>
-            <div class="whatFor">
-                <h3>WHAT’S IN IT FOR YOU?</h3>
-                <p>54 builds strong friendships and sustainable businesses that last even after the event is over. Startups are powered aircrafts, not projectiles.<br><br>
-                <span>Cash Prizes:</span> The top three teams will walk away with some money to help turn their idea into a reality.<br>
-                <span>Dinner:</span> The top teams get a networking dinner with our sponsors.<br>
-                <span>Real Startups:</span> Some of our past winners include <a href="http://iventure.illinois.edu/index.php/2017/06/07/amber-agriculture/">Amber Waves,</a> <a href="https://medium.com/c-u-startups/uiuc-team-profile-mymetrics-5105226a0c49#.35q7n6jn3">Mymetrics,</a> and <a href="http://freeskies.co/">FreeSkies.</a></p>
-            </div>
-            <div class="otherQuestion">
-                <h3>404: QUESTION NOT FOUND?</h3>
-                <p>Have a question that’s not listed here? Feel free to email one of our coordinators, <a href="mailto:rastovc2@illinois.edu">Matt</a> or <a href="mailto:sgupta89@illinois.edu">Shivani</a>, or join our <a href="https://www.facebook.com/illinoisfounders/">Facebook group</a> for updates.</p>
+            <div class="faqInner">
+                <div class="application">
+                    <h3 style="text-decoration: underline;">Application</h3>
+                    <div class="question">
+                        <h3 onclick="var p = this.nextElementSibling; if (p.style.display == 'none') { p.style.display = 'block'; this.children[0].style.transform = 'rotate(90deg)'; } else { p.style.display = 'none'; this.children[0].style.transform = 'rotate(0deg)'; }"><img src="assets/arrow.png" class="arrow"><span>Who should apply?</span></h3>
+                        <p style="display: none;">54 is open to all majors and ages. We strongly believe that entrepreneurship isn’t tied to a major – anyone with a passion to solve a problem can build a startup.</p>
+                    </div>
+                    <div class="question">
+                        <h3 onclick="var p = this.nextElementSibling; if (p.style.display == 'none') { p.style.display = 'block'; this.children[0].style.transform = 'rotate(90deg)'; } else { p.style.display = 'none'; this.children[0].style.transform = 'rotate(0deg)'; }"><img src="assets/arrow.png" class="arrow"><span>When will I hear back?</span></h3>
+                        <p style="display: none;">We will be sending out acceptances on a rolling basis until the application deadline, which is Friday, September 15th.</p>
+                    </div>
+                    <div class="question">
+                        <h3 onclick="var p = this.nextElementSibling; if (p.style.display == 'none') { p.style.display = 'block'; this.children[0].style.transform = 'rotate(90deg)'; } else { p.style.display = 'none'; this.children[0].style.transform = 'rotate(0deg)'; }"><img src="assets/arrow.png" class="arrow"><span>Do I have to pitch an idea to participate?</span></h3>
+                        <p style="display: none;">You can still attend 54 even if you don’t pitch an idea; however, the exchange of ideas is what makes 54 great! We highly encourage brainstorming ideas. We want to be inspired by your passion!</p>
+                    </div>
+                    <div class="question">
+                        <h3 onclick="var p = this.nextElementSibling; if (p.style.display == 'none') { p.style.display = 'block'; this.children[0].style.transform = 'rotate(90deg)'; } else { p.style.display = 'none'; this.children[0].style.transform = 'rotate(0deg)'; }"><img src="assets/arrow.png" class="arrow"><span>What can I do in the meantime?</span></h3>
+                        <p style="display: none;">Think of problems that you personally face every day or see in your community and how you would solve those! We also encourage practicing your pitch! Also, tell your friends and check out our Facebook event and social media links to get updates. :) </p>
+                    </div>
+                </div>
+                <div class="general">
+                    <h3 style="text-decoration: underline;">General</h3>
+                    <div class="question">
+                        <h3 onclick="var p = this.nextElementSibling; if (p.style.display == 'none') { p.style.display = 'block'; this.children[0].style.transform = 'rotate(90deg)'; } else { p.style.display = 'none'; this.children[0].style.transform = 'rotate(0deg)'; }"><img src="assets/arrow.png" class="arrow"><span>What is 54?</span></h3>
+                        <p style="display: none;">54 is a startup weekend where ideas are turned into a reality. Attendees come in on Friday and pitch ideas, form teams, and learn how to turn their ideas into a business with mentors' guidance over the course of the weekend.</p>
+                    </div>
+                    <div class="question">
+                        <h3 onclick="var p = this.nextElementSibling; if (p.style.display == 'none') { p.style.display = 'block'; this.children[0].style.transform = 'rotate(90deg)'; } else { p.style.display = 'none'; this.children[0].style.transform = 'rotate(0deg)'; }"><img src="assets/arrow.png" class="arrow"><span>What's in it for you?</span></h3>
+                        <p style="display: none;">54 builds strong friendships and sustainable businesses that last even after the event is over. Startups are powered aircrafts, not projectiles.<br><br>
+                        <span>Cash Prizes:</span> The top three teams will walk away with some money to help turn their idea into a reality.<br>
+                        <span>Dinner:</span> The top teams get a networking dinner with our sponsors.<br>
+                        <span>Real Startups:</span> Some of our past winners include <a href="http://iventure.illinois.edu/index.php/2017/06/07/amber-agriculture/">Amber Waves,</a> <a href="https://medium.com/c-u-startups/uiuc-team-profile-mymetrics-5105226a0c49#.35q7n6jn3">Mymetrics,</a> and <a href="http://freeskies.co/">FreeSkies.</a></p>
+                    </div>
+                    <div class="question">
+                        <h3 onclick="var p = this.nextElementSibling; if (p.style.display == 'none') { p.style.display = 'block'; this.children[0].style.transform = 'rotate(90deg)'; } else { p.style.display = 'none'; this.children[0].style.transform = 'rotate(0deg)'; }"><img src="assets/arrow.png" class="arrow"><span>Will there be food?</span></h3>
+                        <p style="display: none;">Absolutely! We will have a constant supply of snacks, coffee, and food – you take care of your startup, we will take care of you.</p>
+                    </div>
+                    <div class="question">
+                        <h3 onclick="var p = this.nextElementSibling; if (p.style.display == 'none') { p.style.display = 'block'; this.children[0].style.transform = 'rotate(90deg)'; } else { p.style.display = 'none'; this.children[0].style.transform = 'rotate(0deg)'; }"><img src="assets/arrow.png" class="arrow"><span>Is it overnight?</span></h3>
+                        <p style="display: none;">Yes! We want you to have fun and be fueled with your ideas and enthusiasm to bring your idea to fruition, thus, we provide space, food and drinks so you can make the most of the weekend. But at the same time, we encourage sleep!</p>
+                    </div>
+                    <div class="question">
+                        <h3 onclick="var p = this.nextElementSibling; if (p.style.display == 'none') { p.style.display = 'block'; this.children[0].style.transform = 'rotate(90deg)'; } else { p.style.display = 'none'; this.children[0].style.transform = 'rotate(0deg)'; }"><img src="assets/arrow.png" class="arrow"><span>I have an idea that I want to pitch! What should I do to prepare?</span></h3>
+                        <p style="display: none;">Awesome! 54 is the perfect place to meet team members that can help bring your idea to life. Practice and do your research; no presentation slides please – you will have 60 seconds to convince attendees to join your team!</p>
+                    </div>
+                    <div class="question">
+                        <h3 onclick="var p = this.nextElementSibling; if (p.style.display == 'none') { p.style.display = 'block'; this.children[0].style.transform = 'rotate(90deg)'; } else { p.style.display = 'none'; this.children[0].style.transform = 'rotate(0deg)'; }"><img src="assets/arrow.png" class="arrow"><span>I don’t have an idea that I want to pitch :( </span></h3>
+                        <p style="display: none;">Yet! But bring a unique perspective :) Teams will need designers, developers, marketers, and you!</p>
+                    </div>
+                    <div class="question">
+                        <h3 onclick="var p = this.nextElementSibling; if (p.style.display == 'none') { p.style.display = 'block'; this.children[0].style.transform = 'rotate(90deg)'; } else { p.style.display = 'none'; this.children[0].style.transform = 'rotate(0deg)'; }"><img src="assets/arrow.png" class="arrow"><span>Are we expected to work on our startup after 54 is over?</span></h3>
+                        <p style="display: none;">We provide cash prizes and a network so you have direction and motivation to continue working on your startup through endeavors such as participating in <a href="http://tec.illinois.edu/experiences/cozad">Cozad</a> and startup accelerators. However, learning how a company is started with your team and mentors is still a great experience and side project, as we understand that not everybody can commit to their own company full-time.</p>
+                    </div>
+                </div>
+                <div class="duringWeekend">
+                    <h3 style="text-decoration: underline;">During the Weekend</h3>
+                    <div class="question">
+                        <h3 onclick="var p = this.nextElementSibling; if (p.style.display == 'none') { p.style.display = 'block'; this.children[0].style.transform = 'rotate(90deg)'; } else { p.style.display = 'none'; this.children[0].style.transform = 'rotate(0deg)'; }"><img src="assets/arrow.png" class="arrow"><span>Can I pitch an idea for a startup that’s already in progress?</span></h3>
+                        <p style="display: none;">No. 54 is about building startups from the ground up.</p>
+                    </div>
+                    <div class="question">
+                        <h3 onclick="var p = this.nextElementSibling; if (p.style.display == 'none') { p.style.display = 'block'; this.children[0].style.transform = 'rotate(90deg)'; } else { p.style.display = 'none'; this.children[0].style.transform = 'rotate(0deg)'; }"><img src="assets/arrow.png" class="arrow"><span>Can I pitch more than one idea?</span></h3>
+                        <p style="display: none;">Depending on the number of ideas pitched, you may be able to pitch two ideas.</p>
+                    </div>
+                    <div class="question">
+                        <h3 onclick="var p = this.nextElementSibling; if (p.style.display == 'none') { p.style.display = 'block'; this.children[0].style.transform = 'rotate(90deg)'; } else { p.style.display = 'none'; this.children[0].style.transform = 'rotate(0deg)'; }"><img src="assets/arrow.png" class="arrow"><span>What if my idea doesn’t get selected?</span></h3>
+                        <p style="display: none;">No problem! You can still join a team and participate.</p>
+                    </div>
+                    <div class="question">
+                        <h3 onclick="var p = this.nextElementSibling; if (p.style.display == 'none') { p.style.display = 'block'; this.children[0].style.transform = 'rotate(90deg)'; } else { p.style.display = 'none'; this.children[0].style.transform = 'rotate(0deg)'; }"><img src="assets/arrow.png" class="arrow"><span>Can we see past presentation examples?</span></h3>
+                        <p style="display: none;">Absolutely. Just come up to one of the staff members and they can share them with you.</p>
+                    </div>
+                </div>
+                <div class="logistics">
+                    <h3 style="text-decoration: underline;">Logistics</h3>
+                    <div class="question">
+                        <h3 onclick="var p = this.nextElementSibling; if (p.style.display == 'none') { p.style.display = 'block'; this.children[0].style.transform = 'rotate(90deg)'; } else { p.style.display = 'none'; this.children[0].style.transform = 'rotate(0deg)'; }"><img src="assets/arrow.png" class="arrow"><span>Can I have a pre-formed team?</span></h3>
+                        <p style="display: none;">We highly encourage forming teams at the event.</p>
+                    </div>
+                    <div class="question">
+                        <h3 onclick="var p = this.nextElementSibling; if (p.style.display == 'none') { p.style.display = 'block'; this.children[0].style.transform = 'rotate(90deg)'; } else { p.style.display = 'none'; this.children[0].style.transform = 'rotate(0deg)'; }"><img src="assets/arrow.png" class="arrow"><span>When does the event start and end?</span></h3>
+                        <p style="display: none;">Check-in starts at 6 PM on Friday, September 22nd. The event ends at 6 PM on Sunday, September 24th, with the networking dinner for finalists at 6:30 PM.</p>
+                    </div>
+                    <div class="question">
+                        <h3 onclick="var p = this.nextElementSibling; if (p.style.display == 'none') { p.style.display = 'block'; this.children[0].style.transform = 'rotate(90deg)'; } else { p.style.display = 'none'; this.children[0].style.transform = 'rotate(0deg)'; }"><img src="assets/arrow.png" class="arrow"><span>What should I bring?</span></h3>
+                        <p style="display: none;">Passion and excitement :D But a laptop and laptop charger should be enough!</p>
+                    </div>
+                </div>
             </div>
         </section>
         <!--Schedule-->
@@ -146,7 +218,10 @@
         <!--Sponsors-->
         <section class="sponsorsOuter" id="sponsors">
             <div class="sponsorsInner">
-                <h3>Sponsors Coming Soon</h3>
+                <img src="assets/pixo.png" class="pixo">
+                <img src="assets/slf.jpg" class="slf">
+                <img src="assets/ceterus.png" class="ceterus">
+                <img src="assets/serraventures.png" class="serra">
             </div>
         </section>
         <!--Footer-->
