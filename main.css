@@ -382,19 +382,29 @@ html {
 
 .sponsorsOuter {
     position: absolute;
-    margin-top: 2618px;
+    margin-top: 2600px;
     width: 100%;
     height: 97px;
     z-index: 10;
 }
 
-.sponsorsInner h3 {
-    text-align: center;
-    color: RGB(255,255,255);
-    font-family: Roboto-LightItalic;
-    font-size: 24px;
-    letter-spacing: 1px;
+.sponsorsInner {
+    width: 676px;
+    margin: auto;
 }
+
+.pixo, .serra, .slf, .ceterus {
+    height: 80px;
+}
+
+.pixo, .slf {
+    padding-right: 25px;
+}
+
+.serra {
+    padding-top: 25px;
+    margin-left: 10%;
+} 
 
 /* FOOTER */
 
@@ -420,6 +430,7 @@ html {
 .email {
     float: left;
     color: #FFF;
+    cursor: pointer;
 }
 
 .planeIcon {
@@ -429,15 +440,14 @@ html {
 }
 
 .email a {
-    /*float: right;*/
-    /*padding-left: 20px;*/
+    float: right;
+    padding-left: 15px;
     color: RGB(255,255,255);
     text-decoration: underline;
     line-height: 80px;
-    cursor: pointer;
 }
 
-.email a:hover {
+.email:hover {
     opacity: .8;
 }
 
