@@ -40,6 +40,7 @@
 
 html {
     background-color: RGB(51,51,51);
+    font-family: Roboto-Light;
 }
 
 .cta {
@@ -63,9 +64,6 @@ html {
     position: fixed;
     height: 80px;
     width: 100%;
-    top: 0%;
-    left: 0%;
-    font-family: Roboto-Regular;
     font-size: 17px;
     z-index: 100;
     overflow: hidden;
@@ -85,7 +83,6 @@ html {
 
 #smallLogo {
     position: relative;
-    display: inline-block;
     margin: 0;
     margin-top: 17px;
     float: left;
@@ -100,7 +97,6 @@ html {
 
 .navBarInner nav {
     position: relative;
-    display: inline-block;
     margin-right: 20px;
     float: right;
 }
@@ -130,9 +126,9 @@ html {
 /* HEADER */
 
 .headerOuter {
-    position: absolute;
+    position: relative; /* absolute */
     display: block;
-    margin-top: 150px;
+    padding-top: 150px; /* margin-top */
     left: 0;
     width: 100%;
 }
@@ -159,7 +155,7 @@ html {
 .headerInner h3 {
     display: block;
     margin: 0 auto;
-    margin-top: 8px;
+    padding-top: 10px;
     width: 350px;
     font-family: Roboto-Thin;
     font-size: 24px;
@@ -180,7 +176,7 @@ html {
 
 #mainCTA {
     display: block;
-    position: absolute;
+    position: relative;
     height: 49px;
     width: 127px;
     font-size: 20px;
@@ -202,6 +198,7 @@ html {
     padding-left: 35px;
     position: absolute;
     margin-left: 160px;
+    margin-top: -50px;
 }
 
 .video:hover {
@@ -211,8 +208,8 @@ html {
 /* ABOUT */
 
 .aboutOuter {
-    position: absolute;
-    margin-top: 616px;
+    position: relative;
+    padding-top: 85px; /* margin-top: 616px */
     width: 100%;
     z-index: 10;
 }
@@ -225,7 +222,7 @@ html {
 }
 
 .aboutInner {
-    position: absolute;
+    position: relative;
     margin-top: -1px;
     height: 249px;
     width: 100%;
@@ -248,8 +245,8 @@ html {
 }
 
 .aboutOuter .downSlant {
-    position: absolute;
-    margin-top: 247px;
+    position: relative;
+    margin-top: -1px;
     left: 0;
     right: 0;
     width: 100%;
@@ -259,42 +256,62 @@ html {
 /* FAQ */
 
 .faqOuter {
-    position: absolute;
-    margin-top: 1171px;
-    padding-bottom: 111px;
-    height: 668px;
+    position: relative;
+    padding-top: 68px;
+    
     width: 100%;
     z-index: 10;
 }
 
-.whoApply {
-    top: 0;
-}
-
-.whatFor, .otherQuestion {
-    margin-top: 58px;
-}
-
-.faqOuter h3 {
+.faqInner {
+    position: relative;
     margin: 0 auto;
     width: 57%;
     max-width: 676px;
-    color: RGB(255,255,255);
-	font-family: Roboto-Bold;
-    font-size: 26px;
+}
+
+.leftColumn {
+    float: left;
+    position: relative;
+}
+
+.duringWeekend {
+    padding-top: 45px;
+}
+
+.general {
+    margin-left: 52%;
+    position: relative;
+}
+
+
+.logistics {
+    margin-left: 52%;
+    position: relative;
+    padding-top: 68px;
+}
+
+.faqInner h3 {
+    font-size: 20px;
 	color: RGB(255,120,0);
     letter-spacing: 1px;
 }
 
-.faqOuter p {
-    margin: 0 auto;
-    padding-top: 22px;
-    width: 57%;
-    max-width: 676px;
-    color: RGB(255,255,255);
-	font-family: Roboto-Light;
-    font-size: 20px;
+.question h3 {
+    font-size: 16px;
+	color: RGB(255,120,0);
     letter-spacing: 1px;
+    padding-top: 15px;
+    max-width: 315px;
+    cursor: pointer;
+}
+
+.question p {
+    max-width: 315px;
+    color: RGB(255,255,255);
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding-top: 15px;
 }
 
 .faqOuter span {
@@ -304,17 +321,26 @@ html {
 .faqOuter a {
     color: #FFF;
     text-decoration: underline;
+    transition: .1s;
 }
 
 .faqOuter a:hover {
     opacity: .75;
 }
 
+.arrow {
+    height: 10px;
+}
+
+.question h3 span {
+    padding-left: 10px;
+}
+
 /* SCHEDULE */
 
 .scheduleOuter {
-    position: absolute;
-    margin-top: 2015px;
+    position: relative;
+    padding-top: 68px;
     width: 100%;
     z-index: 10;
 }
@@ -369,7 +395,7 @@ html {
 }
 
 .scheduleOuter .downCrossSlant {
-    position: absolute;
+    position: relative;
     display: block;
     margin-top: 296px;
     left: 0;
@@ -381,16 +407,17 @@ html {
 /* SPONSORS */
 
 .sponsorsOuter {
-    position: absolute;
-    margin-top: 2600px;
+    position: relative;
     width: 100%;
-    height: 97px;
     z-index: 10;
+    
 }
 
 .sponsorsInner {
+    padding-top: 68px;
     width: 676px;
     margin: auto;
+    padding-bottom: 68px;
 }
 
 .pixo, .serra, .slf, .ceterus {
@@ -404,13 +431,12 @@ html {
 .serra {
     padding-top: 25px;
     margin-left: 10%;
-} 
+}
 
 /* FOOTER */
 
 .footerOuter {
-    position: absolute;
-    margin-top: 2875px;
+    position: relative;
     height: 80px;
     width: 100%;
     z-index: 100;
