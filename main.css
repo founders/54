@@ -173,67 +173,39 @@ html {
 	color: RGB(170,170,170);
 }
 
+.buttons {
+    margin: auto;
+    width: 339px;
+}
+
 #mainCTA {
     display: block;
-    margin: auto;
+    position: absolute;
     height: 49px;
     width: 127px;
     font-size: 20px;
 }
 
-[data-tooltip] {
-    position: relative;
-    margin: auto;
-    z-index: 2;
+.video {
+    background-color: RGB(51,51,51);
+    font-family: Roboto-Light;
+    font-size: 20px;
+    color: RGB(255,255,255);
+    outline: none;
+    border: none;
     cursor: pointer;
-}
-
-[data-tooltip]:before,
-[data-tooltip]:after {
-    visibility: hidden;
-    pointer-events: none;
-}
-
-[data-tooltip]:before {
+    transition: .1s;
+    height: 49px;
+    float: right;
+    background: url("assets/play.png") no-repeat 0px center;
+    background-size: 24px;
+    padding-left: 35px;
     position: absolute;
-    bottom: 138%;
-    left: 44%;
-    margin-bottom: 5px;
-    margin-left: -80px;
-    padding: 7px;
-    width: 160px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    background-color: RGB(255,120,0);
-    color: #fff;
-    content: attr(data-tooltip);
-    text-align: center;
-    font-size: 14px;
-    line-height: 1.2;
+    margin-left: 160px;
 }
 
-[data-tooltip]:after {
-    position: absolute;
-    bottom: 138%;
-    left: 50%;
-    margin-left: -5px;
-    width: 0;
-    border-top: 5px solid RGB(255,120,0);
-    border-top: 5px solid RGB(255,120,0);
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    content: " ";
-    font-size: 0;
-    line-height: 0;
-}
-
-[data-tooltip]:hover:before,
-[data-tooltip]:hover:after {
-    visibility: visible;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
+.video:hover {
+    opacity: .75;
 }
 
 /* ABOUT */
@@ -330,12 +302,12 @@ html {
 }
 
 .faqOuter a {
-    color: RGB(255,120,0);
-    text-decoration: none;
+    color: #FFF;
+    text-decoration: underline;
 }
 
 .faqOuter a:hover {
-	color: RGB(255,153,17);
+    opacity: .75;
 }
 
 /* SCHEDULE */
@@ -410,25 +382,35 @@ html {
 
 .sponsorsOuter {
     position: absolute;
-    margin-top: 2618px;
+    margin-top: 2600px;
     width: 100%;
     height: 97px;
     z-index: 10;
 }
 
-.sponsorsInner h3 {
-    text-align: center;
-    color: RGB(255,255,255);
-    font-family: Roboto-LightItalic;
-    font-size: 24px;
-    letter-spacing: 1px;
+.sponsorsInner {
+    width: 676px;
+    margin: auto;
 }
+
+.pixo, .serra, .slf, .ceterus {
+    height: 80px;
+}
+
+.pixo, .slf {
+    padding-right: 25px;
+}
+
+.serra {
+    padding-top: 25px;
+    margin-left: 10%;
+} 
 
 /* FOOTER */
 
 .footerOuter {
     position: absolute;
-    margin-top: 2715px;
+    margin-top: 2875px;
     height: 80px;
     width: 100%;
     z-index: 100;
@@ -448,6 +430,7 @@ html {
 .email {
     float: left;
     color: #FFF;
+    cursor: pointer;
 }
 
 .planeIcon {
@@ -457,14 +440,14 @@ html {
 }
 
 .email a {
-    /*float: right;*/
-    /*padding-left: 20px;*/
+    float: right;
+    padding-left: 15px;
     color: RGB(255,255,255);
     text-decoration: underline;
     line-height: 80px;
 }
 
-.email a:hover {
+.email:hover {
     opacity: .8;
 }
 
