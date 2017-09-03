@@ -459,6 +459,11 @@ html {
     transition: .1s;
 }
 
+.sponsorsInner a:hover {
+    opacity: .8;
+    transition: .1s;
+}
+
 /* FOOTER */
 
 .footerOuter {
