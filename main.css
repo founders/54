@@ -297,7 +297,7 @@ html {
 }
 
 .question h3 {
-    font-size: 16px;
+    font-size: 17.5px;
 	color: RGB(255,120,0);
     letter-spacing: 1px;
     padding-top: 15px;
@@ -311,6 +311,16 @@ html {
     font-size: 16px;
     letter-spacing: 1px;
     padding-top: 15px;
+}
+
+.answer {
+    -moz-transition: height .3s;
+    -ms-transition: height .3s;
+    -o-transition: height .3s;
+    -webkit-transition: height .3s;
+    transition: height .3s;
+    height: 0;
+    overflow: hidden;
 }
 
 .faqOuter span {
@@ -329,6 +339,8 @@ html {
 
 .arrow {
     height: 10px;
+    transition: .15s linear all;
+    pointer-events: none;
 }
 
 .question h3 span {
