@@ -297,7 +297,7 @@ html {
 }
 
 .question h3 {
-    font-size: 16px;
+    font-size: 17.5px;
 	color: RGB(255,120,0);
     letter-spacing: 1px;
     padding-top: 15px;
@@ -311,6 +311,16 @@ html {
     font-size: 16px;
     letter-spacing: 1px;
     padding-top: 15px;
+}
+
+.answer {
+    -moz-transition: height .3s;
+    -ms-transition: height .3s;
+    -o-transition: height .3s;
+    -webkit-transition: height .3s;
+    transition: height .3s;
+    height: 0;
+    overflow: hidden;
 }
 
 .faqOuter span {
@@ -329,6 +339,8 @@ html {
 
 .arrow {
     height: 10px;
+    transition: .15s linear all;
+    pointer-events: none;
 }
 
 .question h3 span {
@@ -375,7 +387,7 @@ html {
 
 .schedule h3 {
     color: RGB(255,255,255);
-	font-family: Roboto-Regular;
+	font-family: Roboto-Light;
     font-size: 24px;
     letter-spacing: 1px;
 }
@@ -409,7 +421,6 @@ html {
     position: relative;
     width: 100%;
     z-index: 10;
-    
 }
 
 .sponsorsInner {
@@ -419,17 +430,56 @@ html {
     padding-bottom: 68px;
 }
 
-.pixo, .serra, .slf, .ceterus {
-    height: 80px;
+.slf {
+    position: relative;
+    width: 75%;
+    margin-left: 12.5%;
 }
 
-.pixo, .slf {
-    padding-right: 25px;
+.microsoft {
+    padding-top: 55px;
+    width: 45%;
+    padding-right: 10%;
+    float: left;
 }
 
-.serra {
-    padding-top: 25px;
-    margin-left: 10%;
+.capital {
+    width: 45%;
+    padding-top: 29px;
+}
+
+.cloudflare, .serra {
+    width: 70%;
+    margin-left: 15%;
+    padding-top: 29px;
+}
+
+.tovala {
+    width: 70%;
+    margin-left: 15%;
+    padding-top: 29px;
+}
+
+.pixo {
+    width: 35%;
+    float: left;
+    padding-top: 29px;
+    padding-right: 10%;
+}
+
+.ceterus {
+    width: 55%;
+    padding-top: 55px;
+}
+
+.sponsorsInner a:hover {
+    opacity: .8;
+    transition: .1s;
+}
+
+.sponsorsInner a:hover {
+    opacity: .8;
+    transition: .1s;
 }
 
 .sponsorsInner a:hover {
@@ -484,9 +534,10 @@ html {
 #foundersLogo {
     position: relative;
     display: inline-block;
-    margin: 0;
+
     margin-top: 20px;
     float: right;
+    padding-right: 20px;
     height: 40px;
     cursor: pointer;
     transition: .1s;
@@ -498,7 +549,7 @@ html {
 
 /* RESPONSIVE */
 
-@media only screen and (max-width: 585px) {
+@media only screen and (max-width: 687px) {
     
     /* NAVIGATION BAR */
     
@@ -539,67 +590,60 @@ html {
     }
 }
 
-@media only screen and (max-width: 983px) {
+@media only screen and (max-width: 1070px) {
     
     /* FAQ */
     
-    .faqOuter {
-        margin-top: 1200px;
+    .faqInner {
+        width: 50%;
     }
     
-    .faqOuter h3 {
-        font-size: 21px;
+    .general {
+        clear: left;
+        margin-left: 0px;
+        padding-top: 68px;
     }
-    .faqOuter p {
-        font-size: 16px;
-        padding-top: 17px;
-    }
-}
 
-@media only screen and (max-width: 625px) {
-    .faqOuter {
-        margin-top: 1070px;
-    }
-}
-
-@media only screen and (max-width: 477px) {
-    .faqOuter {
-        margin-top: 1000px;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    .faqOuter {
-        margin-top: 993px;
-    }
-    
-    .faqOuter h3 {
-        margin-left: 49px;
-    }
-    
-    .faqOuter p {
-        width: 300px;
-    }
-    
-    .whatFor, .otherQuestion {
-        margin-top: 46px;
-    }
-}
-
-@media only screen and (max-width: 443px) {
-    .faqOuter {
-        margin-top: 969px;
+    .logistics {
+        margin-left: 0px;
     }
 }
 
 @media only screen and (max-width: 671px) {
+    
+    /* SCHEDULE */
+    
+    .scheduleInner {
+        height: 528px;
+    }
+    
+    .scheduleOuter .downCrossSlant {
+        margin-top: 526px;
+    }
+
     .schedule {
-        margin-top: 60px;
-        margin-left: 12%;
+        width: 50%;
+        margin: 0 auto;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .plan, .build, .launch {
+        clear: left;
+    }
+    
+    .build {
+        padding-top: 30px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
+    .launch {
+        padding-top: 30px;
     }
 
     .schedule h3 {
-        font-size: 19px;
+        font-size: 20px;
         letter-spacing: 0px;
     }
 
@@ -609,32 +653,13 @@ html {
         letter-spacing: 0px;
         line-height: 20px;
     }
-}
+    
+    /* SPONSORS */
 
-@media only screen and (max-width: 594px) {
-    .schedule {
-        margin-top: 70px;
-        margin-left: 6%;
-    }
-    
-    .build {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-}
-
-@media only screen and (max-width: 493px) {
-    .schedule {
-        margin-top: 38px;
-        margin-left: 18%;
-    }
-    
-    .build {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    
-    .launch {
-        padding-top: 10px;
+    .sponsorsInner {
+        padding-top: 68px;
+        width: 90%;
+        margin: auto;
+        padding-bottom: 68px;
     }
 }
