@@ -374,6 +374,7 @@ html {
     margin: 0 auto;
     margin-top: 60px;
     max-width: 676px;
+    padding-top: 20px;
 }
 
 .plan, .build, .launch {
@@ -413,6 +414,18 @@ html {
     right: 0;
     width: 100%;
     z-index: 10;
+}
+
+.scheduleInner a {
+    text-decoration: none;
+    color: RGB(255,120,0);
+    font-family: Roboto-Regular;
+    float: left;
+    margin-top: 6px;
+}
+
+.scheduleInner a:hover {
+    text-decoration: underline;
 }
 
 /* SPONSORS */

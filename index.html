@@ -17,11 +17,13 @@
                     document.getElementById("navBar").style.backgroundColor = "RGBA(25,25,25,.75)";
                 }
             });
+            
+            
         </script>
         <!--Navigation Bar-->
         <div class="navBarOuter" id="navBar">
             <div class="navBarInner" id="navBar">
-                <img id="smallLogo" src="assets/logos/smallLogo.png">
+                <a href="http://54.io/"><img id="smallLogo" src="assets/logos/smallLogo.png"></a>
                 <button type="button" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSe-mhWTU7Wf_kEJ8gU5saXAJpnT8Eu-TeLdsTq9v7ubu2iQZQ/viewform?usp=sf_link'" class="cta" id="navCTA">Apply</button>
                 <nav id="navigation">
                     <a href="#about">About</a>
@@ -60,6 +62,7 @@
             <!--Content-->
             <div class="aboutInner">
                 <p>54 is a 3-day event where students from different backgrounds come together to form teams and launch a successful startup. No experience required. Just bring yourself, some friends and good ideas. Food and drinks will be provided.</p>
+                <div id="faq"></div>
             </div>
             <!--Divider-->
             <object type="image/svg+xml" data="assets/vectors/downSlant.svg" class="downSlant">
@@ -73,7 +76,7 @@
             </object>
         </section>
         <!--FAQ-->
-        <section class="faqOuter" id="faq">
+        <section class="faqOuter">
             <div class="faqInner">
                 <div class="leftColumn">
                     <div class="application">
@@ -154,7 +157,7 @@
                             <h3 onclick="var answer = this.nextElementSibling; if (answer.clientHeight) { answer.style.height = 0; this.children[0].style.transform = 'rotate(0deg)'; /*this.children[1].style.color = 'RGB(255,120,0)';*/ } else { var wrapper = answer.childNodes[1]; answer.style.height = wrapper.clientHeight + 'px'; this.children[0].style.transform = 'rotate(90deg)'; /*this.children[1].style.color = 'RGB(255,255,255)';*/ } "><img src="assets/arrow.png" class="arrow"><span onselectstart="return false;">What is 54?</span></h3>
                             <div class="answer">
                                 <div class="measuringWrapper">
-                                    <p>54 is a startup weekend where ideas are turned into a reality. Attendees come in on Friday and pitch ideas, form teams, and learn how to turn their ideas into a business with mentors' guidance over the course of the weekend. The top 3 teams are selected on Sunday by a panel of judges and receive support from Founders so that they can excel way past the end of the weeekend. </p>
+                                    <p>54 is a startup weekend where ideas are turned into a reality. Attendees come in on Friday and pitch ideas, form teams, and learn how to turn their ideas into a business with mentors' guidance over the course of the weekend.</p>
                                 </div>
                             </div>
                         </div>
@@ -164,7 +167,7 @@
                                 <div class="measuringWrapper">
                                     <p>54 builds strong friendships and sustainable businesses that last even after the event is over. Startups are powered aircrafts, not projectiles.<br><br>
                                     <span>Cash Prizes:</span> The top three teams will walk away with some money to help turn their idea into a reality.<br>
-                                    <span>Dinner:</span> The top teams get a networking dinner with our sponsors, judges, and mentors.<br>
+                                    <span>Dinner:</span> The top teams get a networking dinner with our sponsors.<br>
                                     <span>Real Startups:</span> Some of our past winners include <a href="http://iventure.illinois.edu/index.php/2017/06/07/amber-agriculture/">Amber Waves,</a> <a href="https://medium.com/c-u-startups/uiuc-team-profile-mymetrics-5105226a0c49#.35q7n6jn3">Mymetrics,</a> and <a href="http://freeskies.co/">FreeSkies.</a></p>
                                 </div>
                             </div>
@@ -173,7 +176,7 @@
                             <h3 onclick="var answer = this.nextElementSibling; if (answer.clientHeight) { answer.style.height = 0; this.children[0].style.transform = 'rotate(0deg)'; /*this.children[1].style.color = 'RGB(255,120,0)';*/ } else { var wrapper = answer.childNodes[1]; answer.style.height = wrapper.clientHeight + 'px'; this.children[0].style.transform = 'rotate(90deg)'; /*this.children[1].style.color = 'RGB(255,255,255)';*/ } "><img src="assets/arrow.png" class="arrow"><span onselectstart="return false;">Will there be food?</span></h3>
                             <div class="answer">
                                 <div class="measuringWrapper">
-                                    <p>Absolutely! We will have a constant supply of snacks, coffee, tea, and food – you take care of your startup, we will take care of you.</p>
+                                    <p>Absolutely! We will have a constant supply of snacks, coffee, and food – you take care of your startup, we will take care of you.</p>
                                 </div>
                             </div>
                         </div>
@@ -181,7 +184,7 @@
                             <h3 onclick="var answer = this.nextElementSibling; if (answer.clientHeight) { answer.style.height = 0; this.children[0].style.transform = 'rotate(0deg)'; /*this.children[1].style.color = 'RGB(255,120,0)';*/ } else { var wrapper = answer.childNodes[1]; answer.style.height = wrapper.clientHeight + 'px'; this.children[0].style.transform = 'rotate(90deg)'; /*this.children[1].style.color = 'RGB(255,255,255)';*/ } "><img src="assets/arrow.png" class="arrow"><span onselectstart="return false;">Is it overnight?</span></h3>
                             <div class="answer">
                                 <div class="measuringWrapper">
-                                    <p>Yes! We want you to have fun and be fueled with your ideas and enthusiasm to bring your idea to fruition, thus, we provide space, food and drinks so you can make the most of the weekend.  But at the same time, we encourage sleep – you don't need to bring in a change of clothes, since we want you guys to go home and get some sleep. </p>
+                                    <p>Yes! We want you to have fun and be fueled with your ideas and enthusiasm to bring your idea to fruition, thus, we provide space, food and drinks so you can make the most of the weekend. But at the same time, we encourage sleep!</p>
                                 </div>
                             </div>
                         </div>
@@ -225,14 +228,6 @@
                                 </div>
                             </div>
                         </div>
-                         <div class="question">
-                            <h3 onclick="var answer = this.nextElementSibling; if (answer.clientHeight) { answer.style.height = 0; this.children[0].style.transform = 'rotate(0deg)'; /*this.children[1].style.color = 'RGB(255,120,0)';*/ } else { var wrapper = answer.childNodes[1]; answer.style.height = wrapper.clientHeight + 'px'; this.children[0].style.transform = 'rotate(90deg)'; /*this.children[1].style.color = 'RGB(255,255,255)';*/ } "><img src="assets/arrow.png" class="arrow"><span onselectstart="return false;">Where can I find social media links?</span></h3>
-                            <div class="answer">
-                                <div class="measuringWrapper">
-                                    <p>Check out our Facebook event <a href="http://bit.ly/54fbevent">here</a> and Founders' Facebook page <a href="https://www.facebook.com/illinoisfounders/">here!</a></p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="logistics">
                         <h3 style="text-decoration: underline;">Logistics</h3>
@@ -240,7 +235,7 @@
                             <h3 onclick="var answer = this.nextElementSibling; if (answer.clientHeight) { answer.style.height = 0; this.children[0].style.transform = 'rotate(0deg)'; /*this.children[1].style.color = 'RGB(255,120,0)';*/ } else { var wrapper = answer.childNodes[1]; answer.style.height = wrapper.clientHeight + 'px'; this.children[0].style.transform = 'rotate(90deg)'; /*this.children[1].style.color = 'RGB(255,255,255)';*/ } "><img src="assets/arrow.png" class="arrow"><span onselectstart="return false;">Can I have a pre-formed team?</span></h3>
                             <div class="answer">
                                 <div class="measuringWrapper">
-                                    <p>We highly encourage forming teams at the event after pitches.</p>
+                                    <p>We highly encourage forming teams at the event.</p>
                                 </div>
                             </div>
                         </div>
@@ -284,7 +279,6 @@
                         <p>Introduction<br>
                         Pitch Fest<br>
                         Team Formation<br>
-                        Speaker<br>
                         Brainstorming</p>
                     </div>
                     <div class="build">
@@ -295,17 +289,16 @@
                         Business Evaluation</p>
                     </div>
                     <div class="launch">
-                        <h3>DAY 3: <span>Launch</span></h3>
-                        <p>Presentations<br>
+                        <h3>Day 3: <span>Launch</span></h3>
+                        <p>Presentation<br>
                         Judging<br>
-                        Prizes<br>
-                        Networking Dinner</p>
-
+                        Prizes</p>
                     </div>
+                    <a href="assets/schedule.pdf">View Full Schedule</a>
                 </div>
             </div>
             <!--Divider-->
-            <object type="image/svg+xml" data="assets/vectors/downCrossSlant.svg" class="downCrossSlant">
+            <object type="image/svg+xml" data="assets/vectors/downCrossSlant.svg" class="downCrossSlant" id="sponsors">
                 <svg width="2880px" height="247px" viewBox="0 0 2880 247" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <g id="WEBSITE" transform="translate(-62.000000, 0.000000)" fill-rule="nonzero">
@@ -319,7 +312,7 @@
             </object>
         </section>
         <!--Sponsors-->
-        <section class="sponsorsOuter" id="sponsors">
+        <section class="sponsorsOuter">
             <div class="sponsorsInner">
                 <a href="http://www.singletonlawfirm.com/"><img src="assets/slf.jpg" class="slf"></a>
                 <a href="https://www.microsoft.com/en-us/"><img src="assets/microsoft.png" class="microsoft"></a>
