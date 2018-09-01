@@ -44,18 +44,18 @@ html {
 }
 
 .cta {
-    background-color: RGB(255,120,0);
+    background-color: #67B8F0;
     font-family: Roboto-Light;
     color: RGB(255,255,255);
     outline: none;
     border: none;
     border-radius: 3px 3px 3px 3px;
     cursor: pointer;
-    transition: .1s;
+    transition: .2s;
 }
 
 .cta:hover {
-    background-color: RGB(204,88,3);
+    background-color: #33A4F2;
 }
 
 /* NAVIGATION BAR */
@@ -292,13 +292,13 @@ html {
 
 .faqInner h3 {
     font-size: 20px;
-	color: RGB(255,120,0);
+	color: #67B8F0;
     letter-spacing: 1px;
 }
 
 .question h3 {
     font-size: 17.5px;
-	color: RGB(255,120,0);
+	color: #67B8F0;
     letter-spacing: 1px;
     padding-top: 15px;
     max-width: 315px;
@@ -324,7 +324,7 @@ html {
 }
 
 .faqOuter span {
-    color: RGB(255,120,0);
+    color: #67B8F0;
 }
 
 .faqOuter a {
@@ -403,7 +403,7 @@ html {
 }
 
 .schedule span {
-    color: RGB(255,120,0);
+    color: #67B8F0;
 }
 
 .scheduleOuter .downCrossSlant {
@@ -418,7 +418,7 @@ html {
 
 .scheduleInner a {
     text-decoration: none;
-    color: RGB(255,120,0);
+    color: #67B8F0;
     font-family: Roboto-Regular;
     float: left;
     margin-top: 6px;
@@ -434,6 +434,11 @@ html {
     position: relative;
     width: 100%;
     z-index: 10;
+}
+
+.sponsorsOuter h1 {
+    color: #67B8F0;
+    text-align: center;
 }
 
 .sponsorsInner {
@@ -563,40 +568,40 @@ html {
 /* RESPONSIVE */
 
 @media only screen and (max-width: 687px) {
-    
+
     /* NAVIGATION BAR */
-    
+
     .navBarInner a {
         display: none;
     }
-    
+
     #navCTA {
         display: none;
     }
-    
+
     .navBarInner a.icon {
         float: right;
         display: block;
     }
-    
+
     .navBarInner.responsive {
         position: relative;
     }
-    
+
     .navBarInner.responsive a.icon {
         position: absolute;
         right: 0;
         top: 0;
     }
-    
+
     .navBarInner.responsive a {
         float: none;
         display: block;
         text-align: left;
     }
-    
+
     /* ABOUT */
-    
+
     .aboutInner p {
         font-size: 16px;
         line-height: 20px;
@@ -604,13 +609,13 @@ html {
 }
 
 @media only screen and (max-width: 1070px) {
-    
+
     /* FAQ */
-    
+
     .faqInner {
         width: 50%;
     }
-    
+
     .general {
         clear: left;
         margin-left: 0px;
@@ -623,13 +628,13 @@ html {
 }
 
 @media only screen and (max-width: 671px) {
-    
+
     /* SCHEDULE */
-    
+
     .scheduleInner {
         height: 528px;
     }
-    
+
     .scheduleOuter .downCrossSlant {
         margin-top: 526px;
     }
@@ -644,13 +649,13 @@ html {
     .plan, .build, .launch {
         clear: left;
     }
-    
+
     .build {
         padding-top: 30px;
         padding-left: 0px;
         padding-right: 0px;
     }
-    
+
     .launch {
         padding-top: 30px;
     }
@@ -666,7 +671,7 @@ html {
         letter-spacing: 0px;
         line-height: 20px;
     }
-    
+
     /* SPONSORS */
 
     .sponsorsInner {
