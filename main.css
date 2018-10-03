@@ -732,21 +732,6 @@ html {
     font-family: Roboto-Light;
 }
 
-.cta {
-    background-color: #E2404C;
-    font-family: Roboto-Light;
-    color: RGB(255,255,255);
-    outline: none;
-    border: none;
-    border-radius: 3px 3px 3px 3px;
-    cursor: pointer;
-    transition: .1s;
-}
-
-.cta:hover {
-    background-color: #E2404C;
-}
-
 /* NAVIGATION BAR */
 
 .navBarOuter {
@@ -951,21 +936,6 @@ html {
     padding-top: 68px;
 }
 
-.faqInner h3 {
-    font-size: 20px;
-    color: #E2404C;
-    letter-spacing: 1px;
-}
-
-.question h3 {
-    font-size: 17.5px;
-    color: #E2404C;
-    letter-spacing: 1px;
-    padding-top: 15px;
-    max-width: 315px;
-    cursor: pointer;
-}
-
 .question p {
     max-width: 315px;
     color: RGB(255,255,255);
@@ -984,9 +954,6 @@ html {
     overflow: hidden;
 }
 
-.faqOuter span {
-    color: #E2404C;
-}
 
 .faqOuter a {
     color: #FFF;
@@ -1051,7 +1018,7 @@ html {
     margin-bottom: 20px;
     display: inline-block;
     border-radius: 100%;
-    border: 10px solid #E2404C;
+    border: 10px solid #67B8F0;
 }
 
 .bio-text {
@@ -1065,7 +1032,7 @@ html {
     /* float: right; */
     display: inline-block;
     margin-left: 50px;
-    color: #E2404C;
+    color: #67B8F0;
     font-size: 40px;
     line-height: 40px;
 }
@@ -1134,7 +1101,7 @@ html {
 }
 
 .schedule span {
-    color: #E2404C;
+    color: #67B8F0;
 }
 
 .scheduleOuter .downCrossSlant {
@@ -1149,7 +1116,7 @@ html {
 
 .scheduleInner a {
     text-decoration: none;
-    color: #E2404C;
+    color: #67B8F0;
     font-family: Roboto-Regular;
     float: left;
     margin-top: 6px;
