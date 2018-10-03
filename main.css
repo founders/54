@@ -441,12 +441,12 @@ html {
 }
 
 .sponsorsOuter h1 {
-    color: #67B8F0;
+    /* color: #67B8F0; */
     text-align: center;
 }
 
 .sponsorsInner {
-    padding-top: 68px;
+    /* padding-top: 68px; */
     width: 676px;
     margin: auto;
     padding-bottom: 68px;
@@ -680,7 +680,7 @@ html {
     /* SPONSORS */
 
     .sponsorsInner {
-        padding-top: 68px;
+        /* padding-top: 68px; */
         width: 90%;
         margin: auto;
         padding-bottom: 68px;
@@ -1139,7 +1139,7 @@ html {
 }
 
 .sponsorsInner {
-    padding-top: 68px;
+    /* padding-top: 68px; */
     width: 676px;
     margin: auto;
     padding-bottom: 68px;
