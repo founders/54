@@ -44,7 +44,7 @@ html {
 }
 
 .cta {
-    background-color: #67B8F0;
+    background-color: rgb(252, 150, 25); /*changed from #67B8F0 (blue) to rgb(252, 150, 25) (orange)*/
     font-family: Roboto-Light;
     color: RGB(255,255,255);
     outline: none;
@@ -55,7 +55,7 @@ html {
 }
 
 .cta:hover {
-    background-color: #33A4F2;
+    background-color: #FF8B00; /*changed from #33A4F2 (blue) to #FF8B00 (orange) */
 }
 
 /* NAVIGATION BAR */
@@ -296,13 +296,13 @@ html {
 
 .faqInner h3 {
     font-size: 20px;
-	color: #67B8F0;
+	color: #FF8B00;
     letter-spacing: 1px;
 }
 
 .question h3 {
     font-size: 17.5px;
-	color: #67B8F0;
+	color: #F9A744;
     letter-spacing: 1px;
     padding-top: 15px;
     max-width: 315px;
@@ -328,7 +328,7 @@ html {
 }
 
 .faqOuter span {
-    color: #67B8F0;
+    color: #FF8B00;
 }
 
 .faqOuter a {
@@ -407,7 +407,7 @@ html {
 }
 
 .schedule span {
-    color: #67B8F0;
+    color: #FF8B00;
 }
 
 .scheduleOuter .downCrossSlant {
@@ -422,7 +422,7 @@ html {
 
 .scheduleInner a {
     text-decoration: none;
-    color: #67B8F0;
+    color: #FF8B00;
     font-family: Roboto-Regular;
     float: left;
     margin-top: 6px;
@@ -441,7 +441,7 @@ html {
 }
 
 .sponsorsOuter h1 {
-    /* color: #67B8F0; */
+    /* color: #FF8B00; */
     text-align: center;
 }
 
@@ -1018,7 +1018,7 @@ html {
     margin-bottom: 20px;
     display: inline-block;
     border-radius: 100%;
-    border: 10px solid #67B8F0;
+    border: 10px solid #FF8B00;
 }
 
 .bio-text {
@@ -1032,7 +1032,7 @@ html {
     /* float: right; */
     display: inline-block;
     margin-left: 50px;
-    color: #67B8F0;
+    color: #FF8B00;
     font-size: 40px;
     line-height: 40px;
 }
@@ -1101,7 +1101,7 @@ html {
 }
 
 .schedule span {
-    color: #67B8F0;
+    color: #FF8B00;
 }
 
 .scheduleOuter .downCrossSlant {
@@ -1116,7 +1116,7 @@ html {
 
 .scheduleInner a {
     text-decoration: none;
-    color: #67B8F0;
+    color: #FF8B00;
     font-family: Roboto-Regular;
     float: left;
     margin-top: 6px;
