@@ -3065,7 +3065,8 @@ input, select, textarea {
 			}
 
 		.spotlights > section:nth-child(2) {
-			background-color: rgba(0, 0, 0, 0.05);
+			<!-- correcting -->
+			background-color: #414143;
 		}
 
 		.spotlights > section:nth-child(3) {
@@ -3875,7 +3876,8 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:hover {
-				color: rgba(255, 255, 255, 0.55);
+
+				color: #f89620
 			}
 
 			#sidebar nav a.active {
@@ -3971,8 +3973,8 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		/*background-attachment: fixed;*/
-		/*background-image: url("images/intro.svg"); */
+		sbackground-attachment: fixed;
+		background-image: url("images/intro.svg");
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
