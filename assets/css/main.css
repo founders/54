@@ -3974,7 +3974,7 @@ input, select, textarea {
 
 	#intro {
 		sbackground-attachment: fixed;
-		background-image: url("images/intro.svg");
+		<!-- background-image: url("images/background.png"); -->
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
